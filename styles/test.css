@@ -1,0 +1,25 @@
+.keyword_wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .keyword_content {
+    display: inline-flex;
+    animation: scroll 30s linear infinite;
+    gap: 2rem;
+  }
+
+  /* остановка при наведении курсором */
+  .keyword_wrapper:hover .keyword_content {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
