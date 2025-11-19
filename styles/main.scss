@@ -1,0 +1,276 @@
+@use './common.scss' as *;
+
+body {
+    /* max-width: 1920px; */
+    margin: 0 auto;
+    header {
+        position: sticky;
+        top: 0; background-color: #fff;
+        nav {
+            padding: 20px 0;
+            width: 100%;
+            margin: 0 auto;
+            ul {
+                @include flRow;
+                gap: 25px;
+                justify-content: center;
+                align-items: center;
+                li {
+                    @include navBar;
+                    width: max-content;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        background-color: #A5B9D7;
+                        border-radius: 30px;
+                    }
+                    a {
+                        line-height: 180%;//클릭 영역을 넓히기
+                        font-size: $size24;
+                        font-weight: $light;
+                        letter-spacing: $min2;
+                        position: relative;
+                        transition: all 0.5s ease;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0; left: 50%;
+                            transform: translateX(-50%);
+                            height: 2px; width: 0px;
+                            background-color: #FFF;
+                            transition: width 0.6s ease;
+                        }
+                        &:hover {color: #FFF;}
+                        &:hover::after {width: 65%;}
+                    }
+                }
+            }
+        }
+    }
+    main {
+        section {padding: $padTB100; max-width: 1550px; margin: 0 auto;}
+        .greetings {
+            height: 100vh;
+            margin-top: 150px;
+            h1 {
+                font-size: $size54;
+                font-weight: $bold;
+                line-height: $line180;
+                letter-spacing: $min2;
+                text-align: $textCenter;
+                font-family: 'Comfortaa';
+                padding-bottom: 20px;
+            }
+            .moto {
+                @include flCol; gap: 20px;
+                h2 {
+                    font-size: $size34;
+                    text-align: $textCenter;
+                }
+                p {
+                    font-size: $size20;
+                    text-align: $textCenter;
+                }
+            }
+            .keyword_wrapper {
+                margin-top: 250px;
+                white-space: nowrap; overflow: hidden;
+                .keyword_content {
+                    display: inline-flex;
+                    gap: 35px;
+                    justify-content: center;
+                    animation: hor_scroll 60s linear infinite;
+                    span {
+                        font-size: $size25;
+                        letter-spacing: $min2;
+                        line-height: $line180;
+                    }
+                }
+            }
+        }
+        .intro {
+            margin: 0 auto;
+            max-width: 1550px;
+            @include flRow;
+            gap: 100px;
+            .left_wrap {
+                max-width: 577px; max-height: 800px;
+                img {width: 100%;}
+            }
+            .right_wrap {
+                width: calc(100% - (577px + 100px));
+                .sect_title  {@include sectionTitle}
+                .sect_content {@include sectionContent}
+            }
+        }
+        .skills {
+            max-width: 1550px;
+            margin: 0 auto;
+            .sect_title {@include sectionTitle;}
+            .skills_wrap {
+                margin-top: 60px;
+                @include flRow;
+                gap: 120px; justify-content: center;
+                align-items: center;
+                .skill_col {
+                    @include flCol; gap: 50px;
+                    align-items: flex-start;
+                    justify-content: center;
+                    .skill_card {
+                        @include flRow; gap: 25px;
+                        justify-content: center; align-items: center;
+                        &:hover .skill_img {animation: skill_rotate 2s ease-in-out both;}
+                        .skill_img {
+                            img {}
+                        }
+                        .skill_title_tag {
+                            @include flCol; gap: 5px;
+                            justify-content: center; align-items: center;
+                            .skill_title {@include skillTitle;}
+                            .adv_skill {@include adv_skill;}
+                            .int_skill {@include int_skill;}
+                        }
+                        .skill_details {
+                            @include flCol; gap: 8px;
+                            .skill_content {@include sectionContent;}
+                        }
+                    }
+                }
+                .col1 {}
+                .col2 {}
+            }
+        }
+        .facts {
+            .sect_title {
+                @include sectionTitle;
+                em {font-size: 2.188rem;}
+            }
+            .fact_wrap {
+                @include flRow;
+                align-items: center;
+                justify-content: space-evenly;
+                margin-top: 60px;
+                .fact1 {}
+                .fact2 {}
+                .fact3 {}
+                .fact4 {}
+                .fact_card {
+                    @include flCol;
+                    gap: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    //transition: transform 0.6s ease;
+                    &:hover .fact_circle {
+                        animation: fact_scale 2.5s ease-in-out infinite;
+                        box-shadow: 0 0 15px rgba(165, 185, 215, 0.6);
+                        background: linear-gradient(135deg, #85719e, #F2DCE7);
+                        
+                    }
+                    &:hover .fact_circle .fact_point {
+                        color: #f9f9f9;
+                    }
+                    &:hover .fact_info .fact_desc {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                    .fact_circle {
+                        background: linear-gradient(135deg, #A5B9D7, #F2DCE7);
+                        border-radius: 100%;
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                        padding: 2rem;
+                        width: 200px;
+                        height: 200px;
+                        @include flCol;
+                        justify-content: center;
+                        align-items: center;
+                        .fact_point {font-size: 2rem;
+                            font-weight: bold;
+                            color: #30476C;
+                        }
+                    }
+                    .fact_info {
+                        @include flCol;
+                        gap: 10px;
+                        .fact_title {
+                            @include flRow;
+                            gap: 10px;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: $size26;
+                            font-weight: $med;
+                            line-height: $line130;
+                            letter-spacing: $min2;
+                        }
+                        .fact_desc {
+                            font-size: $size22;
+                            line-height: $line150;
+                            letter-spacing: $min2;
+                            text-align: $textCenter;
+                            opacity: 0;
+                            transform: translateY(10px);
+                            transition: all 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+        .project_content {
+            .sect_title {@include sectionTitle;}
+            .project_list {
+                margin-top: 25px;
+                @include flCol; gap: 25px;
+                    justify-content: center; align-items: flex-start;
+                > li {
+                    @include flRow; gap: 30px;
+                    justify-content: flex-start; align-items: center;
+                    .project_menu_title {@include projectMenuTitle}
+                    .project_tag_wrap {
+                        @include flRow; gap: 10px;
+                        justify-content: flex-start; align-items: center;
+                        .project_tag {@include projectTag}
+                    }
+                }
+            }
+        }
+        .projects {}
+        .graphic_design {}
+        .experience {
+            .employement_wrap {
+                .exp_title {
+                    img {}
+                    .exp_section_title {@include expSectionTitle;}
+                }
+                .employement_info {
+                    .employement_card {
+                        @include exp_card;
+                        .card_title {@include cardTitle;}
+                        .card_position {@include cardPosition}
+                        .card_date {@include cardDate}
+                    }
+                    .next_img {
+                        svg {}
+                    }
+                }
+            }
+        }
+        .collaboration {}
+    }
+}
+
+//ANIMATION
+@keyframes hor_scroll {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-50%);}
+}
+
+@keyframes skill_rotate {
+    0% {transform: rotate(-15deg);}
+    25% {transform: rotate(30deg);}
+    50% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+@keyframes fact_scale {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}

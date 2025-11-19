@@ -1,0 +1,142 @@
+
+//PADDING
+$padTB100: 100px 0;
+
+//FONT SIZE
+$size54: 3.375rem;
+$size50: 3.125rem;
+$size24: 1.5rem;
+$size34: 2.125rem;
+$size27: 1.688rem;
+$size26: 1.625rem;
+$size25: 1.563rem;
+$size23: 1.438rem;
+$size22: 1.375rem;
+$size20: 1.25rem;
+$size18: 1.125rem;
+$size14: 0.875rem;
+
+//FONT WEIGHT
+$exlight: 200;
+$light: 300;
+$med: 500;
+$bold: 700;
+
+//LETTER SPACING
+$min2: -0.02rem;
+
+//LINE HEIGHT
+$line180: 180%;
+$line130: 130%;
+$line150: 150%;
+
+//TEXT ALIGN
+$textCenter: center;
+
+
+//NAV BAR BUTTONS
+@mixin navBar {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 3px 25px;
+}
+
+//FLEX
+@mixin flRow {
+    display: flex; flex-flow: row nowrap;
+}
+@mixin flCol {
+    display: flex; flex-flow: column nowrap;
+}
+
+//TEXT Var.
+@mixin sectionTitle {
+    line-height: $line130;
+    font-size: $size50;
+    letter-spacing: $min2;
+}
+@mixin sectionContent {
+    line-height: $line150;
+    font-size: $size20;
+    letter-spacing: $min2;
+}
+@mixin skillTitle {
+    font-size: $size22;
+    font-weight: $med;
+    line-height: $line130;
+    letter-spacing: $min2;
+    text-align: $textCenter;
+}
+
+//SKILL TAGS
+@mixin adv_skill {
+    width: max-content;
+    padding: 5px 12px;
+    background-color: #5A7BAE;
+    color: #FFF;
+    font-weight: $light;
+    border-radius: 7px;
+    font-size: $size14;
+}
+@mixin int_skill {
+    width: max-content;
+    padding: 5px 12px;
+    background-color: #A5B9D7;
+    color: #FFF;
+    font-weight: $light;
+    border-radius: 7px;
+    font-size: $size14;
+}
+
+//PROJECT MENU
+@mixin projectMenuTitle {
+    font-size: $size25;
+    font-weight: $light;
+    line-height: $line130;
+    letter-spacing: $min2;
+    color: #555555;
+}
+
+@mixin projectTag {
+    font-size: 1rem;
+    font-weight: $exlight;
+    line-height: $line130;
+    letter-spacing: $min2;
+    color: #555555;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    padding: 2px 13px;
+}
+
+//EXPERIENCE
+@mixin expSectionTitle {
+    font-size: $size27;
+    font-weight: $med;
+    line-height: $line130;
+    letter-spacing: $min2;
+}
+
+@mixin exp_card {
+    padding: 0 30px;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+    box-shadow: #cecaca;
+}
+
+@mixin cardTitle {
+    font-size: $size23;
+    line-height: $line130;
+    letter-spacing: $min2;
+}
+@mixin cardPosition {
+    font-size: $size20;
+    font-weight: $light;
+    line-height: $line130;
+    letter-spacing: $min2;
+}
+@mixin cardDate {
+    font-size: $size18;
+    font-weight: $light;
+    line-height: $line130;
+    letter-spacing: $min2;
+}

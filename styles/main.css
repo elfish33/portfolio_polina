@@ -1,0 +1,391 @@
+body {
+  /* max-width: 1920px; */
+  margin: 0 auto;
+}
+body header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+body header nav {
+  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+body header nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+body header nav ul li {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 3px 25px;
+  width: max-content;
+  transition: all 0.5s ease;
+}
+body header nav ul li:hover {
+  background-color: #A5B9D7;
+  border-radius: 30px;
+}
+body header nav ul li a {
+  line-height: 180%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02rem;
+  position: relative;
+  transition: all 0.5s ease;
+}
+body header nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0px;
+  background-color: #FFF;
+  transition: width 0.6s ease;
+}
+body header nav ul li a:hover {
+  color: #FFF;
+}
+body header nav ul li a:hover::after {
+  width: 65%;
+}
+body main section {
+  padding: 100px 0;
+  max-width: 1550px;
+  margin: 0 auto;
+}
+body main .greetings {
+  height: 100vh;
+  margin-top: 150px;
+}
+body main .greetings h1 {
+  font-size: 3.375rem;
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: -0.02rem;
+  text-align: center;
+  font-family: "Comfortaa";
+  padding-bottom: 20px;
+}
+body main .greetings .moto {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+body main .greetings .moto h2 {
+  font-size: 2.125rem;
+  text-align: center;
+}
+body main .greetings .moto p {
+  font-size: 1.25rem;
+  text-align: center;
+}
+body main .greetings .keyword_wrapper {
+  margin-top: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body main .greetings .keyword_wrapper .keyword_content {
+  display: inline-flex;
+  gap: 35px;
+  justify-content: center;
+  animation: hor_scroll 60s linear infinite;
+}
+body main .greetings .keyword_wrapper .keyword_content span {
+  font-size: 1.563rem;
+  letter-spacing: -0.02rem;
+  line-height: 180%;
+}
+body main .intro {
+  margin: 0 auto;
+  max-width: 1550px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 100px;
+}
+body main .intro .left_wrap {
+  max-width: 577px;
+  max-height: 800px;
+}
+body main .intro .left_wrap img {
+  width: 100%;
+}
+body main .intro .right_wrap {
+  width: calc(100% - 677px);
+}
+body main .intro .right_wrap .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+}
+body main .intro .right_wrap .sect_content {
+  line-height: 150%;
+  font-size: 1.25rem;
+  letter-spacing: -0.02rem;
+}
+body main .skills {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+body main .skills .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+}
+body main .skills .skills_wrap {
+  margin-top: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 120px;
+  justify-content: center;
+  align-items: center;
+}
+body main .skills .skills_wrap .skill_col {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+}
+body main .skills .skills_wrap .skill_col .skill_card {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+body main .skills .skills_wrap .skill_col .skill_card:hover .skill_img {
+  animation: skill_rotate 2s ease-in-out both;
+}
+body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .skill_title {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+  text-align: center;
+}
+body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .adv_skill {
+  width: max-content;
+  padding: 5px 12px;
+  background-color: #5A7BAE;
+  color: #FFF;
+  font-weight: 300;
+  border-radius: 7px;
+  font-size: 0.875rem;
+}
+body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .int_skill {
+  width: max-content;
+  padding: 5px 12px;
+  background-color: #A5B9D7;
+  color: #FFF;
+  font-weight: 300;
+  border-radius: 7px;
+  font-size: 0.875rem;
+}
+body main .skills .skills_wrap .skill_col .skill_card .skill_details {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+body main .skills .skills_wrap .skill_col .skill_card .skill_details .skill_content {
+  line-height: 150%;
+  font-size: 1.25rem;
+  letter-spacing: -0.02rem;
+}
+body main .facts .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+}
+body main .facts .sect_title em {
+  font-size: 2.188rem;
+}
+body main .facts .fact_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+body main .facts .fact_wrap .fact_card {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+body main .facts .fact_wrap .fact_card:hover .fact_circle {
+  animation: fact_scale 2.5s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(165, 185, 215, 0.6);
+  background: linear-gradient(135deg, #85719e, #F2DCE7);
+}
+body main .facts .fact_wrap .fact_card:hover .fact_circle .fact_point {
+  color: #f9f9f9;
+}
+body main .facts .fact_wrap .fact_card:hover .fact_info .fact_desc {
+  opacity: 1;
+  transform: translateY(0px);
+}
+body main .facts .fact_wrap .fact_card .fact_circle {
+  background: linear-gradient(135deg, #A5B9D7, #F2DCE7);
+  border-radius: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body main .facts .fact_wrap .fact_card .fact_circle .fact_point {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #30476C;
+}
+body main .facts .fact_wrap .fact_card .fact_info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+body main .facts .fact_wrap .fact_card .fact_info .fact_title {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .facts .fact_wrap .fact_card .fact_info .fact_desc {
+  font-size: 1.375rem;
+  line-height: 150%;
+  letter-spacing: -0.02rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+body main .project_content .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+}
+body main .project_content .project_list {
+  margin-top: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main .project_content .project_list > li {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .project_content .project_list > li .project_menu_title {
+  font-size: 1.563rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+  color: #555555;
+}
+body main .project_content .project_list > li .project_tag_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .project_content .project_list > li .project_tag_wrap .project_tag {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+  color: #555555;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  padding: 2px 13px;
+}
+body main .experience .employement_wrap .exp_title .exp_section_title {
+  font-size: 1.688rem;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .employement_wrap .employement_info .employement_card {
+  padding: 0 30px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  box-shadow: #cecaca;
+}
+body main .experience .employement_wrap .employement_info .employement_card .card_title {
+  font-size: 1.438rem;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .employement_wrap .employement_info .employement_card .card_position {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .employement_wrap .employement_info .employement_card .card_date {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+@keyframes hor_scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes skill_rotate {
+  0% {
+    transform: rotate(-15deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fact_scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
