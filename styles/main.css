@@ -4,6 +4,7 @@ body {
 }
 body header {
   position: sticky;
+  z-index: 999;
   top: 0;
   background-color: #fff;
 }
@@ -32,10 +33,11 @@ body header nav ul li:hover {
 }
 body header nav ul li a {
   line-height: 180%;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: -0.02rem;
   position: relative;
+  padding-bottom: 4px;
   transition: all 0.5s ease;
 }
 body header nav ul li a::after {
@@ -61,33 +63,44 @@ body main section {
   margin: 0 auto;
 }
 body main .greetings {
+  /* background-color: #F8F4F3; */
   height: 100vh;
-  margin-top: 150px;
+  max-width: 100%;
+  background: linear-gradient(167deg, rgb(165, 185, 215) 0%, rgb(252, 245, 255) 47%, rgb(245, 245, 245) 95%);
 }
-body main .greetings h1 {
+body main .greetings .greetings_wrap {
+  width: 75%;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .greetings .greetings_wrap h1 {
   font-size: 3.375rem;
   font-weight: 700;
-  line-height: 180%;
+  line-height: 150%;
   letter-spacing: -0.02rem;
-  text-align: center;
   font-family: "Comfortaa";
-  padding-bottom: 20px;
+  padding: 120px 50px;
 }
-body main .greetings .moto {
+body main .greetings .greetings_wrap .moto {
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
 }
-body main .greetings .moto h2 {
+body main .greetings .greetings_wrap .moto h2 {
   font-size: 2.125rem;
   text-align: center;
 }
-body main .greetings .moto p {
+body main .greetings .greetings_wrap .moto h2 em {
+  color: #2dbb9b;
+}
+body main .greetings .greetings_wrap .moto p {
   font-size: 1.25rem;
-  text-align: center;
 }
 body main .greetings .keyword_wrapper {
-  margin-top: 250px;
+  margin-top: 150px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -96,88 +109,119 @@ body main .greetings .keyword_wrapper .keyword_content {
   gap: 35px;
   justify-content: center;
   animation: hor_scroll 60s linear infinite;
+  background: #fffefe;
 }
 body main .greetings .keyword_wrapper .keyword_content span {
-  font-size: 1.563rem;
+  font-size: 1.2rem;
   letter-spacing: -0.02rem;
   line-height: 180%;
 }
 body main .intro {
-  margin: 0 auto;
-  max-width: 1550px;
+  background: #F8F4F3;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+}
+body main .intro .contents_wrap {
   display: flex;
   flex-flow: row nowrap;
   gap: 100px;
-}
-body main .intro .left_wrap {
-  max-width: 577px;
-  max-height: 800px;
-}
-body main .intro .left_wrap img {
-  width: 100%;
-}
-body main .intro .right_wrap {
-  width: calc(100% - 677px);
-}
-body main .intro .right_wrap .sect_title {
-  line-height: 130%;
-  font-size: 3.125rem;
-  letter-spacing: -0.02rem;
-}
-body main .intro .right_wrap .sect_content {
-  line-height: 150%;
-  font-size: 1.25rem;
-  letter-spacing: -0.02rem;
-}
-body main .skills {
   max-width: 1550px;
   margin: 0 auto;
 }
-body main .skills .sect_title {
+body main .intro .contents_wrap .left_wrap {
+  max-width: 577px;
+  max-height: 800px;
+  position: relative;
+}
+body main .intro .contents_wrap .left_wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .intro .contents_wrap .left_wrap:before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 100%;
+  background-color: #b1835a;
+  position: absolute;
+}
+body main .intro .contents_wrap .right_wrap {
+  width: calc(100% - 677px);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+body main .intro .contents_wrap .right_wrap .sect_title {
   line-height: 130%;
   font-size: 3.125rem;
   letter-spacing: -0.02rem;
+  font-family: "Roboto Sans";
+  padding-bottom: 140px;
 }
-body main .skills .skills_wrap {
-  margin-top: 60px;
+body main .intro .contents_wrap .right_wrap .sect_content {
+  line-height: 150%;
+  font-size: 1.25rem;
+  letter-spacing: -0.02rem;
+  line-height: 200%;
+  font-size: 1.1rem;
+}
+body main .skills {
+  max-width: 100%;
+  height: 100vh;
+  background: linear-gradient(191deg, rgb(245, 245, 245) 19%, rgb(233, 232, 246) 60%, rgb(255, 255, 255) 95%);
+}
+body main .skills .content_wrap {
+  max-width: 1550px;
+  margin: 60px auto 0;
+}
+body main .skills .content_wrap .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+  font-family: "Roboto Sans";
+}
+body main .skills .content_wrap .skills_wrap {
   display: flex;
   flex-flow: row nowrap;
   gap: 120px;
   justify-content: center;
   align-items: center;
+  padding-top: 60px;
 }
-body main .skills .skills_wrap .skill_col {
+body main .skills .content_wrap .skills_wrap .skill_col {
   display: flex;
   flex-flow: column nowrap;
   gap: 50px;
   align-items: flex-start;
   justify-content: center;
 }
-body main .skills .skills_wrap .skill_col .skill_card {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card {
   display: flex;
   flex-flow: row nowrap;
   gap: 25px;
   justify-content: center;
   align-items: center;
 }
-body main .skills .skills_wrap .skill_col .skill_card:hover .skill_img {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card:hover .skill_img {
   animation: skill_rotate 2s ease-in-out both;
 }
-body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card .skill_title_tag {
   display: flex;
   flex-flow: column nowrap;
   gap: 5px;
   justify-content: center;
   align-items: center;
 }
-body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .skill_title {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card .skill_title_tag .skill_title {
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.02rem;
   text-align: center;
 }
-body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .adv_skill {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card .skill_title_tag .adv_skill {
   width: max-content;
   padding: 5px 12px;
   background-color: #5A7BAE;
@@ -186,7 +230,7 @@ body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .adv_skil
   border-radius: 7px;
   font-size: 0.875rem;
 }
-body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .int_skill {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card .skill_title_tag .int_skill {
   width: max-content;
   padding: 5px 12px;
   background-color: #A5B9D7;
@@ -195,20 +239,25 @@ body main .skills .skills_wrap .skill_col .skill_card .skill_title_tag .int_skil
   border-radius: 7px;
   font-size: 0.875rem;
 }
-body main .skills .skills_wrap .skill_col .skill_card .skill_details {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card .skill_details {
   display: flex;
   flex-flow: column nowrap;
   gap: 8px;
 }
-body main .skills .skills_wrap .skill_col .skill_card .skill_details .skill_content {
+body main .skills .content_wrap .skills_wrap .skill_col .skill_card .skill_details .skill_content {
   line-height: 150%;
   font-size: 1.25rem;
   letter-spacing: -0.02rem;
+}
+body main .facts {
+  height: 100vh;
 }
 body main .facts .sect_title {
   line-height: 130%;
   font-size: 3.125rem;
   letter-spacing: -0.02rem;
+  font-family: "Roboto Sans";
+  line-height: 80%;
 }
 body main .facts .sect_title em {
   font-size: 2.188rem;
@@ -219,6 +268,8 @@ body main .facts .fact_wrap {
   align-items: center;
   justify-content: space-evenly;
   margin-top: 60px;
+  width: 80%;
+  margin: 130px auto 0;
 }
 body main .facts .fact_wrap .fact_card {
   display: flex;
@@ -230,7 +281,18 @@ body main .facts .fact_wrap .fact_card {
 body main .facts .fact_wrap .fact_card:hover .fact_circle {
   animation: fact_scale 2.5s ease-in-out infinite;
   box-shadow: 0 0 15px rgba(165, 185, 215, 0.6);
-  background: linear-gradient(135deg, #85719e, #F2DCE7);
+}
+body main .facts .fact_wrap .fact_card:hover .circle1 {
+  background: linear-gradient(135deg, #82b6fa 0%, #5677B3 100%);
+}
+body main .facts .fact_wrap .fact_card:hover .circle2 {
+  background: linear-gradient(135deg, #2E7D5A 0%, #63C7A3 100%);
+}
+body main .facts .fact_wrap .fact_card:hover .circle3 {
+  background: linear-gradient(135deg, #AFC8FF 0%, #D0B8E8 100%);
+}
+body main .facts .fact_wrap .fact_card:hover .circle4 {
+  background: linear-gradient(135deg, #FFD8A8 0%, #FBC4B2 100%);
 }
 body main .facts .fact_wrap .fact_card:hover .fact_circle .fact_point {
   color: #f9f9f9;
@@ -240,7 +302,6 @@ body main .facts .fact_wrap .fact_card:hover .fact_info .fact_desc {
   transform: translateY(0px);
 }
 body main .facts .fact_wrap .fact_card .fact_circle {
-  background: linear-gradient(135deg, #A5B9D7, #F2DCE7);
   border-radius: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -250,11 +311,24 @@ body main .facts .fact_wrap .fact_card .fact_circle {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 body main .facts .fact_wrap .fact_card .fact_circle .fact_point {
   font-size: 2rem;
   font-weight: bold;
   color: #30476C;
+}
+body main .facts .fact_wrap .fact_card .circle1 {
+  background: linear-gradient(135deg, #7babe6 0%, #70a0ff 100%);
+}
+body main .facts .fact_wrap .fact_card .circle2 {
+  background: linear-gradient(135deg, #83d3ad 0%, #8FF2C4 100%);
+}
+body main .facts .fact_wrap .fact_card .circle3 {
+  background: linear-gradient(135deg, #C9E4FF 0%, #E2D4F0 100%);
+}
+body main .facts .fact_wrap .fact_card .circle4 {
+  background: linear-gradient(135deg, #FFF0D6 0%, #FDE2D3 100%);
 }
 body main .facts .fact_wrap .fact_card .fact_info {
   display: flex;
@@ -267,13 +341,13 @@ body main .facts .fact_wrap .fact_card .fact_info .fact_title {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  font-size: 1.625rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.02rem;
 }
 body main .facts .fact_wrap .fact_card .fact_info .fact_desc {
-  font-size: 1.375rem;
+  font-size: 0.875rem;
   line-height: 150%;
   letter-spacing: -0.02rem;
   text-align: center;
@@ -285,6 +359,7 @@ body main .project_content .sect_title {
   line-height: 130%;
   font-size: 3.125rem;
   letter-spacing: -0.02rem;
+  font-family: "Roboto Sans";
 }
 body main .project_content .project_list {
   margin-top: 25px;
@@ -300,13 +375,25 @@ body main .project_content .project_list > li {
   gap: 30px;
   justify-content: flex-start;
   align-items: center;
+  border-bottom: 1.7px solid #f5f5f5;
+  padding-bottom: 15px;
 }
 body main .project_content .project_list > li .project_menu_title {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 1.563rem;
   font-weight: 300;
   line-height: 130%;
   letter-spacing: -0.02rem;
   color: #555555;
+  line-height: 32px;
+}
+body main .project_content .project_list > li .project_menu_title em {
+  font-weight: 500;
+  font-size: 1.875rem;
 }
 body main .project_content .project_list > li .project_tag_wrap {
   display: flex;
@@ -324,36 +411,231 @@ body main .project_content .project_list > li .project_tag_wrap .project_tag {
   background-color: #F5F5F5;
   border-radius: 5px;
   padding: 2px 13px;
+  transition: all 0.4s linear;
+}
+body main .project_content .project_list > li .project_tag_wrap .project_tag:hover {
+  padding: 4px 15px;
+  background-color: #A5B9D7;
+  color: #fff;
+}
+body main .project_wrap {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body main .project_wrap .project_content_box {
+  width: calc(100% - 849px);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 185px;
+}
+body main .project_wrap .project_content_box .prj_title > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+body main .project_wrap .project_content_box .prj_title > h2:first-child {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+body main .project_wrap .project_content_box .project_info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main .experience {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 70px;
+}
+body main .experience .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+  font-family: "Roboto Sans";
+}
+body main .experience .employement_wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+body main .experience .employement_wrap .exp_title {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 body main .experience .employement_wrap .exp_title .exp_section_title {
-  font-size: 1.688rem;
+  font-size: 1.625rem;
   font-weight: 500;
   line-height: 130%;
   letter-spacing: -0.02rem;
 }
+body main .experience .employement_wrap .employement_info {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
 body main .experience .employement_wrap .employement_info .employement_card {
-  padding: 0 30px;
+  width: 420px;
+  height: 200px;
+  padding: 40px 40px;
   border-radius: 15px;
   background-color: #f5f5f5;
   box-shadow: #cecaca;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
 }
 body main .experience .employement_wrap .employement_info .employement_card .card_title {
-  font-size: 1.438rem;
+  font-size: 1.25rem;
   line-height: 130%;
   letter-spacing: -0.02rem;
 }
 body main .experience .employement_wrap .employement_info .employement_card .card_position {
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 130%;
-  letter-spacing: -0.02rem;
-}
-body main .experience .employement_wrap .employement_info .employement_card .card_date {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 130%;
   letter-spacing: -0.02rem;
 }
+body main .experience .employement_wrap .employement_info .employement_card .card_date {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .edu_wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+body main .experience .edu_wrap .exp_title {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+body main .experience .edu_wrap .exp_title .exp_section_title {
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .edu_wrap .edu_info {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main .experience .edu_wrap .edu_info .edu_card {
+  width: 420px;
+  height: 200px;
+  padding: 40px 40px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  box-shadow: #cecaca;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main .experience .edu_wrap .edu_info .edu_card .title_tag {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .experience .edu_wrap .edu_info .edu_card .title_tag .card_title {
+  font-size: 1.25rem;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .edu_wrap .edu_info .edu_card .title_tag span {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+  color: #5D5D5D;
+}
+body main .experience .edu_wrap .edu_info .edu_card .card_position {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .experience .edu_wrap .edu_info .edu_card .card_date {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .collaboration .sect_title {
+  line-height: 130%;
+  font-size: 3.125rem;
+  letter-spacing: -0.02rem;
+  font-family: "Roboto Sans";
+  padding-bottom: 60px;
+}
+body main .collaboration .coolab_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 50px;
+}
+body main .collaboration .coolab_wrap .collab_right {
+  width: calc(100% - 578px);
+  padding: 50px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 60px;
+  justify-content: flex-start;
+  align-items: center;
+}
+body main .collaboration .coolab_wrap .collab_right h2 {
+  font-size: 1.875rem;
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+  text-align: center;
+}
+body main .collaboration .coolab_wrap .collab_right .collab_link_wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main .collaboration .coolab_wrap .collab_right .collab_link_wrap .link_box a {
+  width: 171px;
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body main .collaboration .coolab_wrap .collab_right .collab_link_wrap .link_box a .link_name {
+  line-height: 130%;
+  letter-spacing: -0.02rem;
+}
+body main .collaboration .coolab_wrap .collab_right .collab_link_wrap .kakao {
+  position: relative;
+}
+body main .collaboration .coolab_wrap .collab_right .collab_link_wrap .kakao .kakao_qr {
+  position: absolute;
+  top: 50px;
+}
+
 @keyframes hor_scroll {
   0% {
     transform: translateX(0%);
