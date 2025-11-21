@@ -42,6 +42,13 @@ $textCenter: center;
     padding: 3px 25px;
 }
 
+//PRJ LINK BUTONS
+@mixin linkBtn {
+    background-color: #cfcece;
+    border-radius: 12px;
+    padding: 10px 25px;
+}
+
 //FLEX
 @mixin flRow {
     display: flex; flex-flow: row nowrap;
@@ -93,7 +100,7 @@ $textCenter: center;
 
 //PROJECT MENU
 @mixin projectMenuTitle {
-    font-size: $size25;
+    font-size: $size20;
     font-weight: $light;
     line-height: $line130;
     letter-spacing: $min2;

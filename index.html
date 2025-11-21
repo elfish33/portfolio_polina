@@ -15,7 +15,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-</head>
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="./scripts/index.js" defer></script>
+    </head>
 
 <body>
     <header>
@@ -30,581 +35,637 @@
             </ul>
         </nav>
     </header>
+    <div class="fixed_top_btn">
+        <button type="button"><svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="white"/>
+            <circle cx="10" cy="10" r="10" fill="url(#paint0_linear_164_26)" fill-opacity="0.2"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.23452 8.28015C6.08436 8.1395 6 7.94877 6 7.74989C6 7.55101 6.08436 7.36028 6.23452 7.21963L9.43853 4.21959C9.58874 4.07899 9.79244 4 10.0048 4C10.2172 4 10.4209 4.07899 10.5711 4.21959L13.7751 7.21963C13.9211 7.36109 14.0018 7.55054 14 7.74719C13.9981 7.94384 13.9139 8.13195 13.7654 8.27101C13.6169 8.41007 13.416 8.48895 13.206 8.49066C12.9959 8.49236 12.7936 8.41677 12.6425 8.28015L10.8058 6.56037V15.25C10.8058 15.4489 10.7214 15.6397 10.5712 15.7803C10.421 15.921 10.2173 16 10.0048 16C9.7924 16 9.58866 15.921 9.43844 15.7803C9.28823 15.6397 9.20383 15.4489 9.20383 15.25V6.56037L7.36714 8.28015C7.21693 8.42075 7.01323 8.49974 6.80083 8.49974C6.58843 8.49974 6.38473 8.42075 6.23452 8.28015Z" fill="#87A9DD"/>
+            <defs>
+            <linearGradient id="paint0_linear_164_26" x1="10" y1="0" x2="10" y2="20" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F5F5F5" stop-opacity="0.4"/>
+            <stop offset="1" stop-color="#454545"/>
+            </linearGradient>
+            </defs>
+            </svg></button>
+    </div>
     <main>
-        <section class="greetings">
-            <div class="greetings_wrap">
-                <h1>Web Designer &<br>Frontend Publisher</h1>
-                <div class="moto">
-                    <h2>웹 페이지에 <em>생명을 불어넣는</em> 폴리나입니다</h2>
-                    <p>Hi! I’m Polina and I bring web-pages to life</p>
-                </div>
-            </div>
-            <div class="keyword_wrapper">
-                <div class="keyword_content">
-                    <span>#열공💪</span>
-                    <span>#꼼꼼</span>
-                    <span>#문제해결</span>
-                    <span>#책임감</span>
-                    <span>#INTJ</span>
-                    <span>#융통성</span>
-                    <span>#커뮤니케이션</span>
-                    <span>#비판적사고</span>
-                    <span>#진취적</span>
-                    <span>#열공💪</span>
-                    <span>#꼼꼼</span>
-                    <span>#문제해결</span>
-                    <span>#책임감</span>
-                    <span>#INTJ</span>
-                    <span>#융통성</span>
-                    <span>#커뮤니케이션</span>
-                    <span>#비판적사고</span>
-                    <span>#진취적</span>
-                    <span>#열공💪</span>
-                    <span>#꼼꼼</span>
-                    <span>#문제해결</span>
-                    <span>#책임감</span>
-                    <span>#INTJ</span>
-                    <span>#융통성</span>
-                    <span>#커뮤니케이션</span>
-                    <span>#비판적사고</span>
-                    <span>#진취적</span>
-                    <span>#열공💪</span>
-                    <span>#꼼꼼</span>
-                    <span>#문제해결</span>
-                    <span>#책임감</span>
-                    <span>#INTJ</span>
-                    <span>#융통성</span>
-                    <span>#커뮤니케이션</span>
-                    <span>#비판적사고</span>
-                    <span>#진취적</span>
-                </div>
-            </div>
-        </section>
-        <section class="intro">
-            <div class="contents_wrap">
-                <div class="left_wrap">
-                    <img src="./images/my photo.png" alt="디블리셔 폴리나입니다">
-                </div>
-                <div class="right_wrap">
-                    <h1 class="sect_title">Intro</h1>
-                    <p class="sect_content">
-                        안녕하세요!<br>
-                        저는 다양한 문화와 사람들을 연결하는 가교 역할을 해온 경험을 바탕으로,<br>
-                        새로운 디지털 세계에 도전하고 있는 웹 디자이너이자 프론트앤드 퍼블리셔 폴리나입니다.<br>
-                        언어와 감각, 그리고 기술을 통해 더 많은 사람들에게<br>
-                        의미 있는 경험을 선물하고 싶습니다.
-                    </p>
-                    <p class="sect_content">
-                        요즘처럼 빠르게 변화하는 시대에는, 무엇보다 좋아하는 일을 하며<br>
-                        새로운 스킬을 신속하게 습득할 수 있는 능력이 중요하다고 생각합니다.<br>
-                        저는 지난 6개월 동안 멋지고 흥미진진한 웹디자인 세계에 깊이 빠져들었습니다.<br>
-                        어렵기도 했지만 그만큼 재미있었고, 매일매일 성장하는 즐거움을 느꼈습니다.
-                    </p>
-                    <p class="sect_content">
-                        HTML, CSS(SASS), JavaScript, Figma, cafe24 등<br>
-                        다양한 기술을 배우며 실제 프로젝트에 직접 적용해보았습니다.<br>
-                        아직 부족한 점도 많지만, 그 과정에서 얻은 경험과 열정은 저에게 큰 자산이 되었습니다.<br>
-                        부족한 부분은 계속 채워나가고 있으며, 저의 성장을 따뜻하게 지켜봐 주신다면 감사하겠습니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="skills">
-            <div class="content_wrap">
-                <h1 class="sect_title">Skills</h1>
-                <div class="skills_wrap">
-                    <div class="skill_col col1">
-                        <div class="skill_card card1">
-                            <div class="skill_img"><img src="./images/html_icon.png" alt="HTML5"></div>
-                            <div class="skill_title_tag">
-                                <h2 class="skill_title">HTML5</h2>
-                                <span class="adv_skill">Advanced</span>
-                            </div>
-                            <div class="skill_details">
-                                <p class="skill_content sect_content">⋄ 시맨틱 태그 사용한 마크업 능숙</p>
-                                <p class="skill_content sect_content">⋄ 웹표준, 웹접근성 기준 준수</p>
-                                <p class="skill_content sect_content">⋄ 크로스브라우징 최적화 경험</p>
-                            </div>
-                        </div>
-                        <div class="skill_card card2">
-                            <div class="skill_img"><img src="./images/css_icon.png" alt="HTML5"></div>
-                            <div class="skill_title_tag">
-                                <h2 class="skill_title">CSS &<br>SCSS</h2>
-                                <span class="adv_skill">Advanced</span>
-                            </div>
-                            <div class="skill_details">
-                                <p class="skill_content sect_content">⋄ 반응형 웹 구현 능숙</p>
-                                <p class="skill_content sect_content">⋄ SCSS 구조화 및 변수 활용</p>
-                                <p class="skill_content sect_content">⋄ 애니메이션 및 모션효과 구현</p>
-                            </div>
-                        </div>
-                        <div class="skill_card card3">
-                            <div class="skill_img"><img src="./images/js_icon.png" alt="HTML5"></div>
-                            <div class="skill_title_tag">
-                                <h2 class="skill_title"> JavaScript<br>
-                                    & jQuery</h2>
-                                <span class="int_skill">Intermediate</span>
-                            </div>
-                            <div class="skill_details">
-                                <p class="skill_content sect_content">⋄ 기본 DOM 조작 및 이벤트 처리</p>
-                                <p class="skill_content sect_content">⋄ Swiper, GSAP 활용한 인터랙티브 UI 구현</p>
-                                <p class="skill_content sect_content">⋄ jQuery 기반 인터랙션 구현</p>
-                            </div>
+        <div class="swiper" id="main_swiper">
+            <div class="swiper-wrapper">
+                <section class="greetings swiper-slide" >
+                    <div class="greetings_wrap">
+                        <h1>Web Designer &<br>Frontend Publisher</h1>
+                        <div class="moto">
+                            <h2>웹 페이지에 <em>생명을 불어넣는</em> 폴리나입니다</h2>
+                            <p>Hi! I’m Polina and I bring web-pages to life</p>
                         </div>
                     </div>
-                    <div class="skill_col col2">
-                        <div class="skill_card card4">
-                            <div class="skill_img"><img src="./images/figma_icon.png" alt="HTML5"></div>
-                            <div class="skill_title_tag">
-                                <h2 class="skill_title">Figma</h2>
-                                <span class="adv_skill">Advanced</span>
+                    <div class="keyword_wrapper">
+                        <div class="keyword_content">
+                            <span>#열공💪</span>
+                            <span>#꼼꼼</span>
+                            <span>#문제해결</span>
+                            <span>#책임감</span>
+                            <span>#INTJ</span>
+                            <span>#융통성</span>
+                            <span>#커뮤니케이션</span>
+                            <span>#비판적사고</span>
+                            <span>#진취적</span>
+                            <span>#열공💪</span>
+                            <span>#꼼꼼</span>
+                            <span>#문제해결</span>
+                            <span>#책임감</span>
+                            <span>#INTJ</span>
+                            <span>#융통성</span>
+                            <span>#커뮤니케이션</span>
+                            <span>#비판적사고</span>
+                            <span>#진취적</span>
+                            <span>#열공💪</span>
+                            <span>#꼼꼼</span>
+                            <span>#문제해결</span>
+                            <span>#책임감</span>
+                            <span>#INTJ</span>
+                            <span>#융통성</span>
+                            <span>#커뮤니케이션</span>
+                            <span>#비판적사고</span>
+                            <span>#진취적</span>
+                            <span>#열공💪</span>
+                            <span>#꼼꼼</span>
+                            <span>#문제해결</span>
+                            <span>#책임감</span>
+                            <span>#INTJ</span>
+                            <span>#융통성</span>
+                            <span>#커뮤니케이션</span>
+                            <span>#비판적사고</span>
+                            <span>#진취적</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="intro swiper-slide">
+                    <div class="contents_wrap">
+                        <div class="left_wrap">
+                            <img src="./images/my photo.png" alt="디블리셔 폴리나입니다">
+                        </div>
+                        <div class="right_wrap">
+                            <h1 class="sect_title">Intro</h1>
+                            <p class="sect_content">
+                                안녕하세요!<br>
+                                저는 다양한 문화와 사람들을 연결하는 가교 역할을 해온 경험을 바탕으로,<br>
+                                새로운 디지털 세계에 도전하고 있는 웹 디자이너이자 프론트앤드 퍼블리셔 폴리나입니다.<br>
+                                언어와 감각, 그리고 기술을 통해 더 많은 사람들에게<br>
+                                의미 있는 경험을 선물하고 싶습니다.
+                            </p>
+                            <p class="sect_content">
+                                요즘처럼 빠르게 변화하는 시대에는, 무엇보다 좋아하는 일을 하며<br>
+                                새로운 스킬을 신속하게 습득할 수 있는 능력이 중요하다고 생각합니다.<br>
+                                저는 지난 6개월 동안 멋지고 흥미진진한 웹디자인 세계에 깊이 빠져들었습니다.<br>
+                                어렵기도 했지만 그만큼 재미있었고, 매일매일 성장하는 즐거움을 느꼈습니다.
+                            </p>
+                            <p class="sect_content">
+                                HTML, CSS(SASS), JavaScript, Figma, cafe24 등<br>
+                                다양한 기술을 배우며 실제 프로젝트에 직접 적용해보았습니다.<br>
+                                아직 부족한 점도 많지만, 그 과정에서 얻은 경험과 열정은 저에게 큰 자산이 되었습니다.<br>
+                                부족한 부분은 계속 채워나가고 있으며, 저의 성장을 따뜻하게 지켜봐 주신다면 감사하겠습니다.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="skills swiper-slide">
+                    <div class="content_wrap">
+                        <h1 class="sect_title">Skills</h1>
+                        <div class="skills_wrap">
+                            <div class="skill_col col1">
+                                <div class="skill_card card1">
+                                    <div class="skill_img"><img src="./images/html_icon.png" alt="HTML5"></div>
+                                    <div class="skill_title_tag">
+                                        <h2 class="skill_title">HTML5</h2>
+                                        <span class="adv_skill">Advanced</span>
+                                    </div>
+                                    <div class="skill_details">
+                                        <p class="skill_content sect_content">⋄ 시맨틱 태그 사용한 마크업 능숙</p>
+                                        <p class="skill_content sect_content">⋄ 웹표준, 웹접근성 기준 준수</p>
+                                        <p class="skill_content sect_content">⋄ 크로스브라우징 최적화 경험</p>
+                                    </div>
+                                </div>
+                                <div class="skill_card card2">
+                                    <div class="skill_img"><img src="./images/css_icon.png" alt="HTML5"></div>
+                                    <div class="skill_title_tag">
+                                        <h2 class="skill_title">CSS &<br>SCSS</h2>
+                                        <span class="adv_skill">Advanced</span>
+                                    </div>
+                                    <div class="skill_details">
+                                        <p class="skill_content sect_content">⋄ 반응형 웹 구현 능숙</p>
+                                        <p class="skill_content sect_content">⋄ SCSS 구조화 및 변수 활용</p>
+                                        <p class="skill_content sect_content">⋄ 애니메이션 및 모션효과 구현</p>
+                                    </div>
+                                </div>
+                                <div class="skill_card card3">
+                                    <div class="skill_img"><img src="./images/js_icon.png" alt="HTML5"></div>
+                                    <div class="skill_title_tag">
+                                        <h2 class="skill_title"> JavaScript<br>
+                                            & jQuery</h2>
+                                        <span class="int_skill">Intermediate</span>
+                                    </div>
+                                    <div class="skill_details">
+                                        <p class="skill_content sect_content">⋄ 기본 DOM 조작 및 이벤트 처리</p>
+                                        <p class="skill_content sect_content">⋄ Swiper, GSAP 활용한 인터랙티브 UI 구현</p>
+                                        <p class="skill_content sect_content">⋄ jQuery 기반 인터랙션 구현</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="skill_details">
-                                <p class="skill_content sect_content">⋄ UI·UX 설계</p>
-                                <p class="skill_content sect_content">⋄ 컴포넌트 및 오토레이아웃 활용</p>
-                                <p class="skill_content sect_content">⋄ 반응형 웹 디자인 설계</p>
+                            <div class="skill_col col2">
+                                <div class="skill_card card4">
+                                    <div class="skill_img"><img src="./images/figma_icon.png" alt="HTML5"></div>
+                                    <div class="skill_title_tag">
+                                        <h2 class="skill_title">Figma</h2>
+                                        <span class="adv_skill">Advanced</span>
+                                    </div>
+                                    <div class="skill_details">
+                                        <p class="skill_content sect_content">⋄ UI·UX 설계</p>
+                                        <p class="skill_content sect_content">⋄ 컴포넌트 및 오토레이아웃 활용</p>
+                                        <p class="skill_content sect_content">⋄ 반응형 웹 디자인 설계</p>
+                                    </div>
+                                </div>
+                                <div class="skill_card card5">
+                                    <div class="skill_img"><img src="./images/cafe24_icon.png" alt="HTML5"></div>
+                                    <div class="skill_title_tag">
+                                        <h2 class="skill_title">cafe24<br>퍼블리싱</h2>
+                                        <span class="int_skill">Intermediate</span>
+                                    </div>
+                                    <div class="skill_details">
+                                        <p class="skill_content sect_content">⋄ 쇼핑몰 관리자 인터페이스 이해</p>
+                                        <p class="skill_content sect_content">⋄ 기존 코드 수정하여 디자인 구현 </p>
+                                        <p class="skill_content sect_content">⋄ 반응형 쇼핑몰 구현</p>
+                                    </div>
+                                </div>
+                                <div class="skill_card card6">
+                                    <div class="skill_img"><img src="./images/photoshop_icon.png" alt="HTML5"></div>
+                                    <div class="skill_title_tag">
+                                        <h2 class="skill_title">Photoshop</h2>
+                                        <span class="int_skill">Intermediate</span>
+                                    </div>
+                                    <div class="skill_details">
+                                        <p class="skill_content sect_content">⋄ 이미지 리사이징 및 최적화</p>
+                                        <p class="skill_content sect_content">⋄ 웹 배너 및 아이콘 제작 경험 </p>
+                                        <p class="skill_content sect_content">⋄ 레이어 및 마스크 활용 능숙</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="skill_card card5">
-                            <div class="skill_img"><img src="./images/cafe24_icon.png" alt="HTML5"></div>
-                            <div class="skill_title_tag">
-                                <h2 class="skill_title">cafe24<br>퍼블리싱</h2>
-                                <span class="int_skill">Intermediate</span>
-                            </div>
-                            <div class="skill_details">
-                                <p class="skill_content sect_content">⋄ 쇼핑몰 관리자 인터페이스 이해</p>
-                                <p class="skill_content sect_content">⋄ 기존 코드 수정하여 디자인 구현 </p>
-                                <p class="skill_content sect_content">⋄ 반응형 쇼핑몰 구현</p>
-                            </div>
-                        </div>
-                        <div class="skill_card card6">
-                            <div class="skill_img"><img src="./images/photoshop_icon.png" alt="HTML5"></div>
-                            <div class="skill_title_tag">
-                                <h2 class="skill_title">Photoshop</h2>
-                                <span class="int_skill">Intermediate</span>
-                            </div>
-                            <div class="skill_details">
-                                <p class="skill_content sect_content">⋄ 이미지 리사이징 및 최적화</p>
-                                <p class="skill_content sect_content">⋄ 웹 배너 및 아이콘 제작 경험 </p>
-                                <p class="skill_content sect_content">⋄ 레이어 및 마스크 활용 능숙</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="facts">
-            <h1 class="sect_title">Few facts<br><em>about me</em></h1>
-            <ul class="fact_wrap">
-                <li class="fact_card fact1">
-                    <div class="fact_circle circle1">
-                        <span class="fact_point point1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 36 36">
-                            <path fill="#EEE"
-                                d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z" />
-                            <path fill="#C60C30"
-                                d="M21.441 13.085a6 6 0 0 0-8.356 1.474A3.001 3.001 0 0 0 18 18a3 3 0 0 1 4.915 3.442a6 6 0 0 0-1.474-8.357z" />
-                            <path fill="#003478"
-                                d="M22.178 17.264A3 3 0 0 0 18 18a3.001 3.001 0 0 1-4.915-3.442a6 6 0 1 0 9.829 6.882a2.997 2.997 0 0 0-.736-4.176z" />
-                            <path fill="#292F33"
-                                d="m24.334 25.572l1.928-2.298l.766.643l-1.928 2.298zm2.57-3.063l1.928-2.297l.766.643l-1.928 2.297zm-1.038 4.351l1.928-2.297l.766.643l-1.928 2.297zm2.572-3.066l1.93-2.297l.766.644l-1.93 2.296zm-1.041 4.352l1.93-2.297l.765.643l-1.929 2.297zm2.571-3.065l1.927-2.3l.767.643l-1.927 2.3zm.004-14.162l.766-.643l1.93 2.299l-.767.643zM27.4 7.853l.766-.643l1.928 2.299l-.767.642zm-1.533 1.288l.766-.643l4.5 5.362l-.766.643zm-1.532 1.284l.767-.643l1.927 2.298l-.766.642zm2.57 3.065l.766-.643l1.93 2.297l-.765.643zM6.4 20.854l.766-.643l4.499 5.363l-.767.643zM4.87 22.14l.765-.642l1.929 2.298l-.767.643zm2.567 3.066l.766-.643l1.93 2.297l-.766.643zm-4.101-1.781l.766-.643l4.5 5.362l-.767.643zm-.001-10.852l4.498-5.362l.767.642l-4.5 5.363zm1.532 1.287l4.5-5.363l.766.643l-4.5 5.362zM6.4 15.145l4.5-5.363l.766.643l-4.5 5.363z" />
-                        </svg>
-                        <br>7년</span>
-                    </div>
-                    <div class="fact_info">
-                        <h2 class="fact_title">한국 거주 7년+</h2>
-                        <p class="fact_desc">F비자 소유자로서 한국 문화와<br>
-                            업무 환경에 깊은 통합</p>
-                    </div>
-                </li>
-                <li class="fact_card fact2">
-                    <div class="fact_circle circle2">
-                        <span class="fact_point point2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 64 64">
-                                <path fill="#ffe1bd"
-                                    d="m56.3 33.4l-1.2-18.1l-8.3 5.1c-4.1-.7-5.2-.7-8.4-2.3c-1.9-.9-4.3-.3-5.5.4c-1.8-1.9-13.5.9-14.8 1.5c-3.5-1-8.7-5.1-8.7-5.1L7.7 35.4l2.3.6c.2.7.8 2.4.8 2.4c-2.2 2.8.4 6.1 2.9 5c-1.1 2.8 1.8 5.4 4.1 3.6c-.3 2.6 2.4 4.5 4.4 2.7c-.9 3.1 2.6 5.4 4.7 2.9c1.5 1 2.9 1.8 4.1 2.2c2.1.9 4.4-1.1 4-3.6c2.4 2.8 6 .1 5.2-3c2.7 2.1 6-1.4 4.3-4.5c3 1.7 5.6-2.9 2.7-5.9l9.1-4.4" />
-                                <g fill="#e6b796">
-                                    <path
-                                        d="M13.9 36.3c1.5.7 2.5 3 .9 5l-.7.8c-.8 1-1.6 1.3-2.4 1.3c.6.3 1.3.3 2 0c.1-.3.3-.7.6-1l.7-.8c.4-.5.9-.9 1.3-1.1c.8-2.1-.6-4.1-2.4-4.2m11.5 9.9c1.6.4 2.8 2.5 1.6 4.8l-.6.9c-.6 1.1-1.4 1.6-2.2 1.7c1.1.3 2.3-.1 3.1-1.6l.6-.9c1.4-2.8-.5-5.1-2.5-4.9m-7.1-.8l1.6-2.5c-.1-1.4-1.3-2.6-2.5-2.7c1.5.7 2.5 3 .9 5l-.7.8c-.8 1-1.6 1.3-2.5 1.3c.8.4 1.7.3 2.6-.3c.1-.5.3-1.1.6-1.6m4.3-4.5c1.6.5 2.7 2.7 1.3 4.9l-1.9 3c-.7 1.1-1.5 1.5-2.3 1.5c1 .3 2.3 0 3.2-1.4l1.9-3c1.6-2.6-.2-5.1-2.2-5m13.3 2.5c.1 0 1.3-.2 1.7-.2c-1.5-1.5-3.9-.3-5.3-1.1c1 1.7 3.1 1.3 3.3 1.3l2.4 3.1c2 2.5.4 5.4-1.7 5.7c2.2.7 4.4-1.6 3.7-4.1c-.1-.1-4.1-4.7-4.1-4.7m2.4-5.8s1.5-.3 2.8-.3c-1.5-1.2-3.8-.1-5.3-1.1c.6 1.3 1.9 1.3 2.3 1.3l4.6 5.3c2.1 2.4.6 5.3-1.5 5.8c2.4.7 4.7-2.4 3.2-5.1c-1-.3-6.1-5.9-6.1-5.9" />
-                                    <path
-                                        d="M35.1 49.1c-1.5-1.2-3.6-.3-4.5-.9c.5 1.4 2.4 1.1 2.5 1.1c1.7 2.6-.1 5.3-2.2 5.5c2.1.9 4.4-1.1 4-3.6c-.1-.1-1.5-1.9-1.5-1.9c.2-.1 1.3-.2 1.7-.2m20.1-17.4s-1.7 3.5-8.3 5.4c-.9-1.1-2.8-3.3-5-5.2c1.4-.3 2.1-1.4 3.2-1.6c-.4-.4-1.8-.2-2.9.2c-2 .7-6.6-2.5-6.6-2.5l-3.8.5c-2.7 2.6-8.5 4-8.8 0c-.2-2.8 5.9-4.7 7.8-6.5c2.4-2.3 4.5-5.2 8.4-3.2c3.2 1.6 4.5 1.5 8.9 2.3c1.5.3 2.5 1 3.6 2.5c-.9-2.1-2.2-3-3.8-3.3l7-3.3l.1-1.7l-8.3 4.7c-3.8-.6-5.2-.6-8.3-2.1c-2-1-3.6-.7-4.9.1c-2.4-1.4-3.8-1.1-4.7-.9c-2.8.9-7.3 1-11.3 2.6c.7.2 1.4.4 1.9.4c3.9-1.2 8-1.1 9.9-1.8c.6-.2 1.8-.2 3.1.5c-.8.7-1.5 1.5-2.3 2.3c-1.9 1.8-7.7 4.4-7.3 7.7c.2 1.6 2.4 5.8 9.7 1.1l3.1-.4s5.7 2.7 11 8.9c2.1 2.4.8 5-1.3 5.6c2.7.5 5-3.3 2.4-5.9l6.3-3.4l1.2-3" />
-                                </g>
-                                <path fill="#3b946f"
-                                    d="m53.4 16.3l3.3 17.1l-2.7 1.2c-1.4-3.7-3.5-12.6-3-16.9l2.4-1.4" />
-                                <path fill="#e6b796"
-                                    d="M11.1 38c-.5-1.2-.8-2.8-.8-2.8l-2.5-1.7l-.2 1.9l2.2.6c.3 1 .6 1.8 1 2.4l.3-.4" />
-                                <path fill="#3b946f" d="m6.1 35.1l5.4-18.7l2.5 1.7c.4 2.8-4.2 15.6-5.9 17.5l-2-.5" />
-                                <path fill="#47b892"
-                                    d="M53.3 16.2c-.8.5 2.1 17.8 3.3 17.3c3.8-1.7 5.5-2.2 5.5-2.2V10.7c-.1 0-2.4 1.7-8.8 5.5M2 9v25.5s1.8.3 4.1.8c1.3.3 6-18.5 5.7-18.8C8.4 14.2 2 9 2 9" />
-                            </svg>
-                            <br>5년</span>
-                    </div>
-                    <div class="fact_info">
-                        <h2 class="fact_title">팀워크 경험 5년+</h2>
-                        <p class="fact_desc">대기업과 중소기업에서<br>
-                            다양한 협업 경험 보유</p>
-                    </div>
-                </li>
-                <li class="fact_card fact3">
-                    <div class="fact_circle circle3">
-                        <span class="fact_point point3">
-                            <img src="./images/earth.svg" alt="">
-                            <br>3x</span>
-                    </div>
-                    <div class="fact_info">
-                        <h2 class="fact_title">3개 국어 가능</h2>
-                        <p class="fact_desc">한국어, 영어, 러시아어<br>능통한
-                            글로벌 커뮤니케이터</p>
-                    </div>
-                </li>
-                <li class="fact_card fact4">
-                    <div class="fact_circle circle4">
-                        <span class="fact_point point1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 36 36">
-                                <path fill="#553788"
-                                    d="M15 31c0 2.209-.791 4-3 4H5c-4 0-4-14 0-14h7c2.209 0 3 1.791 3 4v6z" />
-                                <path fill="#9266CC"
-                                    d="M34 33h-1V23h1a1 1 0 1 0 0-2H10c-4 0-4 14 0 14h24a1 1 0 1 0 0-2z" />
-                                <path fill="#CCD6DD" d="M34.172 33H11c-2 0-2-10 0-10h23.172c1.104 0 1.104 10 0 10z" />
-                                <path fill="#99AAB5"
-                                    d="M11.5 25h23.35c-.135-1.175-.36-2-.678-2H11c-1.651 0-1.938 6.808-.863 9.188C9.745 29.229 10.199 25 11.5 25z" />
-                                <path fill="#269" d="M12 8a4 4 0 0 1-4 4H4C0 12 0 1 4 1h4a4 4 0 0 1 4 4v3z" />
-                                <path fill="#55ACEE"
-                                    d="M31 10h-1V3h1a1 1 0 1 0 0-2H7C3 1 3 12 7 12h24a1 1 0 1 0 0-2z" />
-                                <path fill="#CCD6DD" d="M31.172 10H8c-2 0-2-7 0-7h23.172c1.104 0 1.104 7 0 7z" />
-                                <path fill="#99AAB5"
-                                    d="M8 5h23.925c-.114-1.125-.364-2-.753-2H8C6.807 3 6.331 5.489 6.562 7.5C6.718 6.142 7.193 5 8 5z" />
-                                <path fill="#F4900C" d="M20 17a4 4 0 0 1-4 4H6c-4 0-4-9 0-9h10a4 4 0 0 1 4 4v1z" />
-                                <path fill="#FFAC33"
-                                    d="M35 19h-1v-5h1a1 1 0 1 0 0-2H15c-4 0-4 9 0 9h20a1 1 0 1 0 0-2z" />
-                                <path fill="#CCD6DD" d="M35.172 19H16c-2 0-2-5 0-5h19.172c1.104 0 1.104 5 0 5z" />
-                                <path fill="#99AAB5"
-                                    d="M16 16h19.984c-.065-1.062-.334-2-.812-2H16c-1.274 0-1.733 2.027-1.383 3.5c.198-.839.657-1.5 1.383-1.5z" />
-                            </svg>
-                            <br>1000시간</span>
-                    </div>
-                    <div class="fact_info">
-                        <h2 class="fact_title">1000시간 이상 학습</h2>
-                        <p class="fact_desc">웹 퍼블리싱을 익히기 위해<br>
-                            6개월간 하루 평균 8시간 공부</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="project_content">
-            <h1 class="sect_title">Content</h1>
-            <ul class="project_list">
-                <li>
-                    <h2 class="project_menu_title"><a href="#"><em>1</em> 뉴발란스 키즈</a></h2>
-                    <div class="project_tag_wrap">
-                        <span class="project_tag">#운동화</span>
-                        <span class="project_tag">#상품 목록 페이지</span>
-                        <span class="project_tag">#상품 상세 페이지</span>
-                    </div>
-                </li>
-                <li>
-                    <h2 class="project_menu_title"><a href="#"><em>2</em> WMF코리아</a></h2>
-                    <div class="project_tag_wrap">
-                        <span class="project_tag">#독일 주방 용품</span>
-                        <span class="project_tag">#cafe24</span>
-                    </div>
-                </li>
-                <li>
-                    <h2 class="project_menu_title"><a href="#"><em>3</em> 디마르3</a></h2>
-                    <div class="project_tag_wrap">
-                        <span class="project_tag">#화장품</span>
-                        <span class="project_tag">#고급스러움</span>
-                    </div>
-                </li>
-                <li>
-                    <h2 class="project_menu_title"><a href="#"><em>4</em> 런던베이글뮤지엄</a></h2>
-                    <div class="project_tag_wrap">
-                        <span class="project_tag">#기획</span>
-                        <span class="project_tag">#브렌드 소개 페이지</span>
-                        <span class="project_tag">#애니메이션</span>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="project_wrap project1">
-            <div class="project_img_box">
-                <img src="./images/newbalance_final_mockup.jpg" alt="뉴발란스 키즈 리디자인 및 퍼블리싱 결과 목업입니다">
-            </div>
-            <div class="project_content_box">
-                <div class="prj_title">
-                    <h2>RE-DESING & PUBLISHING :</h2>
-                    <h2>NEW BALANCE KIDS</h2>
-                </div>
-                <dl class="project_info">
-                    <dt class="prj_info_title">프로젝트명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">설명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">작업량 : </dt>
-                    <dd class="prj_info_desc">메인 페이지, 상품 목록 페이지 및 상품 상세페이지 디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">스킬 : </dt>
-                    <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
-
-                    <dt class="prj_info_title">배운 점 : </dt>
-                    <dd class="prj_info_desc">UX 개선 블라블라</dd>
-
-                    <dt class="prj_info_title">작업 시간 : </dt>
-                    <dd class="prj_info_desc">1주일</dd>
-
-                    <dt class="prj_info_title">기여도 : </dt>
-                    <dd class="prj_info_desc">99%</dd>
-                </dl>
-                <div class="project_link_box">
-                    <a href="#">Prototype (Figma)</a>
-                    <a href="#">Re-Designed Web (Github)</a>
-                    <a href="#">Original Web</a>
-                </div>
-            </div>
-        </section>
-        <section class="project_wrap project2">
-            <div class="project_img_box">
-                <img src="#" alt="뉴발란스 키즈 리디자인 및 퍼블리싱 결과 목업입니다">
-            </div>
-            <div class="project_content_box">
-                <div class="prj_title">
-                    <h2>RE-DESING & PUBLISHING :</h2>
-                    <h2>NEW BALANCE KIDS</h2>
-                </div>
-                <dl class="project_info">
-                    <dt class="prj_info_title">프로젝트명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">설명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">작업량 : </dt>
-                    <dd class="prj_info_desc">메인 페이지, 상품 목록 페이지 및 상품 상세페이지 디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">스킬 : </dt>
-                    <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
-
-                    <dt class="prj_info_title">배운 점 : </dt>
-                    <dd class="prj_info_desc">UX 개선 블라블라</dd>
-
-                    <dt class="prj_info_title">작업 시간 : </dt>
-                    <dd class="prj_info_desc">1주일</dd>
-
-                    <dt class="prj_info_title">기여도 : </dt>
-                    <dd class="prj_info_desc">99%</dd>
-                </dl>
-                <div class="project_link_box">
-                    <a href="#">Prototype (Figma)</a>
-                    <a href="#">Re-Designed Web (Github)</a>
-                    <a href="#">Original Web</a>
-                </div>
-            </div>
-        </section>
-        <section class="project_wrap project3">
-            <div class="project_content_box">
-                <div class="prj_title">
-                    <h2>RE-DESING & PUBLISHING :</h2>
-                    <h2>NEW BALANCE KIDS</h2>
-                </div>
-                <dl class="project_info">
-                    <dt class="prj_info_title">프로젝트명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">설명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">작업량 : </dt>
-                    <dd class="prj_info_desc">메인 페이지, 상품 목록 페이지 및 상품 상세페이지 디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">스킬 : </dt>
-                    <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
-
-                    <dt class="prj_info_title">배운 점 : </dt>
-                    <dd class="prj_info_desc">UX 개선 블라블라</dd>
-
-                    <dt class="prj_info_title">작업 시간 : </dt>
-                    <dd class="prj_info_desc">1주일</dd>
-
-                    <dt class="prj_info_title">기여도 : </dt>
-                    <dd class="prj_info_desc">99%</dd>
-                </dl>
-                <div class="project_link_box">
-                    <a href="#">Prototype (Figma)</a>
-                    <a href="#">Re-Designed Web (Github)</a>
-                    <a href="#">Original Web</a>
-                </div>
-            </div>
-            <div class="project_img_box">
-                <img src="#" alt="뉴발란스 키즈 리디자인 및 퍼블리싱 결과 목업입니다">
-            </div>
-        </section>
-        <section class="project_wrap project4">
-            <div class="project_img_box">
-                <img src="#" alt="뉴발란스 키즈 리디자인 및 퍼블리싱 결과 목업입니다">
-            </div>
-            <div class="project_content_box">
-                <div class="prj_title">
-                    <h2>RE-DESING & PUBLISHING :</h2>
-                    <h2>NEW BALANCE KIDS</h2>
-                </div>
-                <dl class="project_info">
-                    <dt class="prj_info_title">프로젝트명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">설명 : </dt>
-                    <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">작업량 : </dt>
-                    <dd class="prj_info_desc">메인 페이지, 상품 목록 페이지 및 상품 상세페이지 디자인 및 퍼블리싱</dd>
-
-                    <dt class="prj_info_title">스킬 : </dt>
-                    <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
-
-                    <dt class="prj_info_title">배운 점 : </dt>
-                    <dd class="prj_info_desc">UX 개선 블라블라</dd>
-
-                    <dt class="prj_info_title">작업 시간 : </dt>
-                    <dd class="prj_info_desc">1주일</dd>
-
-                    <dt class="prj_info_title">기여도 : </dt>
-                    <dd class="prj_info_desc">99%</dd>
-                </dl>
-                <div class="project_link_box">
-                    <a href="#">Prototype (Figma)</a>
-                    <a href="#">Re-Designed Web (Github)</a>
-                    <a href="#">Original Web</a>
-                </div>
-            </div>
-        </section>
-        <section class="graphic_design"></section>
-        <section class="experience">
-            <h1 class="sect_title">Experience</h1>
-            <div class="employement_wrap">
-                <div class="exp_title">
-                    <img src="./images/employement.svg" alt="경력 아이콘">
-                    <h2 class="exp_section_title">Employement</h2>
-                </div>
-                <div class="employement_info">
-                    <div class="employement_card">
-                        <h3 class="card_title">(주)디엘이앤씨(구.대림산업)</h3>
-                        <p class="card_position">플랜트 본부 - 통번역 전문가</p>
-                        <p class="card_date">2021/09 ~ 2025/06</p>
-                    </div>
-                    <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
-                            <path
-                                d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
-                                fill="#F5F5F5" />
-                        </svg></div>
-                    <div class="employement_card">
-                        <h3 class="card_title">(주)게임덱스</h3>
-                        <p class="card_position">모바일 게임 현지화 전문가</p>
-                        <p class="card_date">2021/02 ~ 2021/09</p>
-                    </div>
-                    <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
-                            <path
-                                d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
-                                fill="#F5F5F5" />
-                        </svg></div>
-                    <div class="employement_card">
-                        <h3 class="card_title">프리랜서</h3>
-                        <p class="card_position">한·영·러 통번역 및 감수</p>
-                        <p class="card_date">2012/09 ~ 2025/06</p>
-                    </div>
-                </div>
-            </div>
-            <div class="edu_wrap">
-                <div class="exp_title">
-                    <img src="./images/education.svg" alt="학력 아이콘">
-                    <h2 class="exp_section_title">Education</h2>
-                </div>
-                <div class="edu_info">
-                    <div class="edu_card">
-                        <div class="title_tag">
-                            <h3 class="card_title">인천그린컴퓨터아카데미</h3>
-                            <span>수료</span>
-                        </div>
-                        <p class="card_position">UI/UX 프론트엔드 반응형웹디자인&<br>웹퍼블리셔 (웹,앱,피그마) 개발 양성과정</p>
-                        <p class="card_date">2025/07 ~ 2025/12</p>
-                    </div>
-                    <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
-                            <path
-                                d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
-                                fill="#F5F5F5" />
-                        </svg></div>
-                    <div class="edu_card">
-                        <div class="title_tag">
-                            <h3 class="card_title">중앙대 국제대학원</h3>
-                            <span>석사 졸업</span>
-                        </div>
-                        <p class="card_position">한·러 전문통번역학과</p>
-                        <p class="card_date">2019/03 ~ 2021/02</p>
-                    </div>
-                    <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
-                            <path
-                                d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
-                                fill="#F5F5F5" />
-                        </svg></div>
-                    <div class="edu_card">
-                        <div class="title_tag">
-                            <h3 class="card_title">벨라루스 국립대학교</h3>
-                            <span>학사 졸업</span>
-                        </div>
-                        <p class="card_position">중국어학과</p>
-                        <p class="card_date">2013/09 ~ 2018/06</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="collaboration">
-            <h1 class="sect_title">Let's collaborate</h1>
-            <div class="coolab_wrap">
-                <div class="collab_img"><img src="./images/my photo_small.png" alt="디블리셔 폴리나입니다"></div>
-                <div class="collab_right">
-                    <h2>Thank you for reading!<br>언제든지 연락 주시면 감사하겠습니다!</h2>
-                    <div class="collab_link_wrap">
-                        <div class="link_box">
-                            <a href="#">
-                                <img src="./images/gmail.png" alt="g-mail">
-                                <span class="link_name">E-mail</span>
-                                <img src="./images/link.png" alt="바로가기">
-                            </a>
-                        </div>
-                        <div class="link_box">
-                            <a href="#" class="kakao">
-                                <img src="./images/kakao.png" alt="Kakao">
-                                <span class="link_name">Kakao QR</span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23435 5.83407C4.38437 5.6841 4.58782 5.59985 4.79995 5.59985C5.01208 5.59985 5.21553 5.6841 5.36555 5.83407L7.99995 8.46847L10.6344 5.83407C10.7081 5.75767 10.7964 5.69672 10.894 5.65479C10.9916 5.61287 11.0966 5.5908 11.2028 5.58987C11.3091 5.58895 11.4144 5.60919 11.5127 5.64942C11.611 5.68964 11.7004 5.74904 11.7755 5.82416C11.8506 5.89927 11.91 5.98859 11.9502 6.08691C11.9904 6.18523 12.0107 6.29057 12.0098 6.3968C12.0088 6.50302 11.9868 6.60799 11.9448 6.7056C11.9029 6.8032 11.842 6.89148 11.7656 6.96527L8.56555 10.1653C8.41553 10.3153 8.21208 10.3995 7.99995 10.3995C7.78782 10.3995 7.58437 10.3153 7.43435 10.1653L4.23435 6.96527C4.08437 6.81525 4.00012 6.61181 4.00012 6.39967C4.00012 6.18754 4.08437 5.9841 4.23435 5.83407Z" fill="#868686"/>
+                </section>
+                <section class="facts swiper-slide">
+                    <h1 class="sect_title">Few facts<br><em>about me</em></h1>
+                    <ul class="fact_wrap">
+                        <li class="fact_card fact1">
+                            <div class="fact_circle circle1">
+                                <span class="fact_point point1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 36 36">
+                                    <path fill="#EEE"
+                                        d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z" />
+                                    <path fill="#C60C30"
+                                        d="M21.441 13.085a6 6 0 0 0-8.356 1.474A3.001 3.001 0 0 0 18 18a3 3 0 0 1 4.915 3.442a6 6 0 0 0-1.474-8.357z" />
+                                    <path fill="#003478"
+                                        d="M22.178 17.264A3 3 0 0 0 18 18a3.001 3.001 0 0 1-4.915-3.442a6 6 0 1 0 9.829 6.882a2.997 2.997 0 0 0-.736-4.176z" />
+                                    <path fill="#292F33"
+                                        d="m24.334 25.572l1.928-2.298l.766.643l-1.928 2.298zm2.57-3.063l1.928-2.297l.766.643l-1.928 2.297zm-1.038 4.351l1.928-2.297l.766.643l-1.928 2.297zm2.572-3.066l1.93-2.297l.766.644l-1.93 2.296zm-1.041 4.352l1.93-2.297l.765.643l-1.929 2.297zm2.571-3.065l1.927-2.3l.767.643l-1.927 2.3zm.004-14.162l.766-.643l1.93 2.299l-.767.643zM27.4 7.853l.766-.643l1.928 2.299l-.767.642zm-1.533 1.288l.766-.643l4.5 5.362l-.766.643zm-1.532 1.284l.767-.643l1.927 2.298l-.766.642zm2.57 3.065l.766-.643l1.93 2.297l-.765.643zM6.4 20.854l.766-.643l4.499 5.363l-.767.643zM4.87 22.14l.765-.642l1.929 2.298l-.767.643zm2.567 3.066l.766-.643l1.93 2.297l-.766.643zm-4.101-1.781l.766-.643l4.5 5.362l-.767.643zm-.001-10.852l4.498-5.362l.767.642l-4.5 5.363zm1.532 1.287l4.5-5.363l.766.643l-4.5 5.362zM6.4 15.145l4.5-5.363l.766.643l-4.5 5.363z" />
                                 </svg>
-                                <img class="kakao_qr" src="./images/kakaoQR.png" alt="카카오 QR코드입니다">
-                            </a>
+                                <br>7년</span>
+                            </div>
+                            <div class="fact_info">
+                                <h2 class="fact_title">한국 거주 7년+</h2>
+                                <p class="fact_desc">F비자 소유자로서 한국 문화와<br>
+                                    업무 환경에 깊은 통합</p>
+                            </div>
+                        </li>
+                        <li class="fact_card fact2">
+                            <div class="fact_circle circle2">
+                                <span class="fact_point point2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 64 64">
+                                        <path fill="#ffe1bd"
+                                            d="m56.3 33.4l-1.2-18.1l-8.3 5.1c-4.1-.7-5.2-.7-8.4-2.3c-1.9-.9-4.3-.3-5.5.4c-1.8-1.9-13.5.9-14.8 1.5c-3.5-1-8.7-5.1-8.7-5.1L7.7 35.4l2.3.6c.2.7.8 2.4.8 2.4c-2.2 2.8.4 6.1 2.9 5c-1.1 2.8 1.8 5.4 4.1 3.6c-.3 2.6 2.4 4.5 4.4 2.7c-.9 3.1 2.6 5.4 4.7 2.9c1.5 1 2.9 1.8 4.1 2.2c2.1.9 4.4-1.1 4-3.6c2.4 2.8 6 .1 5.2-3c2.7 2.1 6-1.4 4.3-4.5c3 1.7 5.6-2.9 2.7-5.9l9.1-4.4" />
+                                        <g fill="#e6b796">
+                                            <path
+                                                d="M13.9 36.3c1.5.7 2.5 3 .9 5l-.7.8c-.8 1-1.6 1.3-2.4 1.3c.6.3 1.3.3 2 0c.1-.3.3-.7.6-1l.7-.8c.4-.5.9-.9 1.3-1.1c.8-2.1-.6-4.1-2.4-4.2m11.5 9.9c1.6.4 2.8 2.5 1.6 4.8l-.6.9c-.6 1.1-1.4 1.6-2.2 1.7c1.1.3 2.3-.1 3.1-1.6l.6-.9c1.4-2.8-.5-5.1-2.5-4.9m-7.1-.8l1.6-2.5c-.1-1.4-1.3-2.6-2.5-2.7c1.5.7 2.5 3 .9 5l-.7.8c-.8 1-1.6 1.3-2.5 1.3c.8.4 1.7.3 2.6-.3c.1-.5.3-1.1.6-1.6m4.3-4.5c1.6.5 2.7 2.7 1.3 4.9l-1.9 3c-.7 1.1-1.5 1.5-2.3 1.5c1 .3 2.3 0 3.2-1.4l1.9-3c1.6-2.6-.2-5.1-2.2-5m13.3 2.5c.1 0 1.3-.2 1.7-.2c-1.5-1.5-3.9-.3-5.3-1.1c1 1.7 3.1 1.3 3.3 1.3l2.4 3.1c2 2.5.4 5.4-1.7 5.7c2.2.7 4.4-1.6 3.7-4.1c-.1-.1-4.1-4.7-4.1-4.7m2.4-5.8s1.5-.3 2.8-.3c-1.5-1.2-3.8-.1-5.3-1.1c.6 1.3 1.9 1.3 2.3 1.3l4.6 5.3c2.1 2.4.6 5.3-1.5 5.8c2.4.7 4.7-2.4 3.2-5.1c-1-.3-6.1-5.9-6.1-5.9" />
+                                            <path
+                                                d="M35.1 49.1c-1.5-1.2-3.6-.3-4.5-.9c.5 1.4 2.4 1.1 2.5 1.1c1.7 2.6-.1 5.3-2.2 5.5c2.1.9 4.4-1.1 4-3.6c-.1-.1-1.5-1.9-1.5-1.9c.2-.1 1.3-.2 1.7-.2m20.1-17.4s-1.7 3.5-8.3 5.4c-.9-1.1-2.8-3.3-5-5.2c1.4-.3 2.1-1.4 3.2-1.6c-.4-.4-1.8-.2-2.9.2c-2 .7-6.6-2.5-6.6-2.5l-3.8.5c-2.7 2.6-8.5 4-8.8 0c-.2-2.8 5.9-4.7 7.8-6.5c2.4-2.3 4.5-5.2 8.4-3.2c3.2 1.6 4.5 1.5 8.9 2.3c1.5.3 2.5 1 3.6 2.5c-.9-2.1-2.2-3-3.8-3.3l7-3.3l.1-1.7l-8.3 4.7c-3.8-.6-5.2-.6-8.3-2.1c-2-1-3.6-.7-4.9.1c-2.4-1.4-3.8-1.1-4.7-.9c-2.8.9-7.3 1-11.3 2.6c.7.2 1.4.4 1.9.4c3.9-1.2 8-1.1 9.9-1.8c.6-.2 1.8-.2 3.1.5c-.8.7-1.5 1.5-2.3 2.3c-1.9 1.8-7.7 4.4-7.3 7.7c.2 1.6 2.4 5.8 9.7 1.1l3.1-.4s5.7 2.7 11 8.9c2.1 2.4.8 5-1.3 5.6c2.7.5 5-3.3 2.4-5.9l6.3-3.4l1.2-3" />
+                                        </g>
+                                        <path fill="#3b946f"
+                                            d="m53.4 16.3l3.3 17.1l-2.7 1.2c-1.4-3.7-3.5-12.6-3-16.9l2.4-1.4" />
+                                        <path fill="#e6b796"
+                                            d="M11.1 38c-.5-1.2-.8-2.8-.8-2.8l-2.5-1.7l-.2 1.9l2.2.6c.3 1 .6 1.8 1 2.4l.3-.4" />
+                                        <path fill="#3b946f" d="m6.1 35.1l5.4-18.7l2.5 1.7c.4 2.8-4.2 15.6-5.9 17.5l-2-.5" />
+                                        <path fill="#47b892"
+                                            d="M53.3 16.2c-.8.5 2.1 17.8 3.3 17.3c3.8-1.7 5.5-2.2 5.5-2.2V10.7c-.1 0-2.4 1.7-8.8 5.5M2 9v25.5s1.8.3 4.1.8c1.3.3 6-18.5 5.7-18.8C8.4 14.2 2 9 2 9" />
+                                    </svg>
+                                    <br>5년</span>
+                            </div>
+                            <div class="fact_info">
+                                <h2 class="fact_title">팀워크 경험 5년+</h2>
+                                <p class="fact_desc">대기업과 중소기업에서<br>
+                                    다양한 협업 경험 보유</p>
+                            </div>
+                        </li>
+                        <li class="fact_card fact3">
+                            <div class="fact_circle circle3">
+                                <span class="fact_point point3">
+                                    <img src="./images/earth.svg" alt="">
+                                    <br>3x</span>
+                            </div>
+                            <div class="fact_info">
+                                <h2 class="fact_title">3개 국어 가능</h2>
+                                <p class="fact_desc">한국어, 영어, 러시아어<br>능통한
+                                    글로벌 커뮤니케이터</p>
+                            </div>
+                        </li>
+                        <li class="fact_card fact4">
+                            <div class="fact_circle circle4">
+                                <span class="fact_point point1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 36 36">
+                                        <path fill="#553788"
+                                            d="M15 31c0 2.209-.791 4-3 4H5c-4 0-4-14 0-14h7c2.209 0 3 1.791 3 4v6z" />
+                                        <path fill="#9266CC"
+                                            d="M34 33h-1V23h1a1 1 0 1 0 0-2H10c-4 0-4 14 0 14h24a1 1 0 1 0 0-2z" />
+                                        <path fill="#CCD6DD" d="M34.172 33H11c-2 0-2-10 0-10h23.172c1.104 0 1.104 10 0 10z" />
+                                        <path fill="#99AAB5"
+                                            d="M11.5 25h23.35c-.135-1.175-.36-2-.678-2H11c-1.651 0-1.938 6.808-.863 9.188C9.745 29.229 10.199 25 11.5 25z" />
+                                        <path fill="#269" d="M12 8a4 4 0 0 1-4 4H4C0 12 0 1 4 1h4a4 4 0 0 1 4 4v3z" />
+                                        <path fill="#55ACEE"
+                                            d="M31 10h-1V3h1a1 1 0 1 0 0-2H7C3 1 3 12 7 12h24a1 1 0 1 0 0-2z" />
+                                        <path fill="#CCD6DD" d="M31.172 10H8c-2 0-2-7 0-7h23.172c1.104 0 1.104 7 0 7z" />
+                                        <path fill="#99AAB5"
+                                            d="M8 5h23.925c-.114-1.125-.364-2-.753-2H8C6.807 3 6.331 5.489 6.562 7.5C6.718 6.142 7.193 5 8 5z" />
+                                        <path fill="#F4900C" d="M20 17a4 4 0 0 1-4 4H6c-4 0-4-9 0-9h10a4 4 0 0 1 4 4v1z" />
+                                        <path fill="#FFAC33"
+                                            d="M35 19h-1v-5h1a1 1 0 1 0 0-2H15c-4 0-4 9 0 9h20a1 1 0 1 0 0-2z" />
+                                        <path fill="#CCD6DD" d="M35.172 19H16c-2 0-2-5 0-5h19.172c1.104 0 1.104 5 0 5z" />
+                                        <path fill="#99AAB5"
+                                            d="M16 16h19.984c-.065-1.062-.334-2-.812-2H16c-1.274 0-1.733 2.027-1.383 3.5c.198-.839.657-1.5 1.383-1.5z" />
+                                    </svg>
+                                    <br>8h × 8m</span>
+                            </div>
+                            <div class="fact_info">
+                                <h2 class="fact_title">1000시간 이상 학습</h2>
+                                <p class="fact_desc">웹 퍼블리싱을 익히기 위해<br>
+                                    6개월간 하루 평균 8시간 공부</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="project_content swiper-slide">
+                    <h1 class="sect_title">Content</h1>
+                    <ul class="project_list">
+                        <li>
+                            <h2 class="project_menu_title"><a href="#"><em>1</em> 뉴발란스 키즈</a></h2>
+                            <div class="project_tag_wrap">
+                                <span class="project_tag">#운동화</span>
+                                <span class="project_tag">#상품 목록 페이지</span>
+                                <span class="project_tag">#상품 상세 페이지</span>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="project_menu_title"><a href="#"><em>2</em> WMF코리아</a></h2>
+                            <div class="project_tag_wrap">
+                                <span class="project_tag">#독일 주방 용품</span>
+                                <span class="project_tag">#cafe24</span>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="project_menu_title"><a href="#"><em>3</em> 디마르3</a></h2>
+                            <div class="project_tag_wrap">
+                                <span class="project_tag">#화장품</span>
+                                <span class="project_tag">#고급스러움</span>
+                            </div>
+                        </li>
+                        <li>
+                            <h2 class="project_menu_title"><a href="#"><em>4</em> 런던베이글뮤지엄</a></h2>
+                            <div class="project_tag_wrap">
+                                <span class="project_tag">#기획</span>
+                                <span class="project_tag">#브렌드 소개 페이지</span>
+                                <span class="project_tag">#애니메이션</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="project_wrap swiper-slide" id="project1">
+                    <div class="project_img_box">
+                        <img src="./images/newbalance_final_mockup.jpg" alt="뉴발란스 키즈 리디자인 및 퍼블리싱 결과 목업입니다">
+                    </div>
+                    <div class="project_content_box">
+                        <div class="prj_title">
+                            <h2>Re-Design & Publishing :</h2>
+                            <h2 class="main_prj">NEW BALANCE KIDS</h2>
                         </div>
-                        <div class="link_box">
-                            <a href="#">
-                                <img src="./images/linkedin.png" alt="Linkedin">
-                                <span class="link_name">LinkedIn</span>
-                                <img src="./images/link.png" alt="바로가기">
-                            </a>
-                        </div>
-                        <div class="link_box">
-                            <a href="#">
-                                <img src="./images/github.png" alt="Github">
-                                <span class="link_name">GitHub</span>
-                                <img src="./images/link.png" alt="바로가기">
-                            </a>
+                        <dl class="project_info">
+                            <dt class="prj_info_title">프로젝트명</dt>
+                            <dd class="prj_info_desc">뉴발란스 키즈 리디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">설명</dt>
+                            <dd class="prj_info_desc">키즈 브랜드 UX 개선 중심의 리디자인 프로젝트</dd>
+        
+                            <dt class="prj_info_title">작업량</dt>
+                            <dd class="prj_info_desc">메인 페이지, 상품 목록 페이지 및 상품 상세페이지 디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">스킬</dt>
+                            <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
+        
+                            <dt class="prj_info_title">개선한 점</dt>
+                            <dd class="prj_info_desc">3040 부모 타겟 관점에서 UX 개선 전략 수립(Shop by Age, 스타일 스토리즈 섹션 추가), 커머스 기능과 브랜드 아이덴티티 간 균형 조율, 상품 목록 페이지에 브랜딩 요소 자연스럽게 통합, 상품 상세 페이지의 사용자 흐름 및 정보 구조 개선</dd>
+        
+                            <dt class="prj_info_title">작업 시간</dt>
+                            <dd class="prj_info_desc">1주일</dd>
+        
+                            <dt class="prj_info_title">기여도</dt>
+                            <dd class="prj_info_desc">99%</dd>
+                        </dl>
+                        <div class="project_link_box">
+                            <div class="figma_wrap">
+                                <button type="button" id="balance_figma_btn">Prototype (Figma)<img src="./images/arrow_down.svg" alt="더보기"></button>
+                                <div class="figma_box" id="balance_figma_pop">
+                                    <a href="https://www.figma.com/proto/Q25EHPISOKBnBA5J37oVbL/-PORTFOLIO--New-Balance-Kids-RE-DESIGN?node-id=147-2123&p=f&t=1U6gnfdksHzCwjx1-8&scaling=min-zoom&content-scaling=fixed&page-id=147%3A1147&hide-ui=1" target="_blank">Desktop Ver.<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.66669 4.00033H4.00002C3.6464 4.00033 3.30726 4.1408 3.05721 4.39085C2.80716 4.6409 2.66669 4.98004 2.66669 5.33366V12.0003C2.66669 12.3539 2.80716 12.6931 3.05721 12.9431C3.30726 13.1932 3.6464 13.3337 4.00002 13.3337H10.6667C11.0203 13.3337 11.3594 13.1932 11.6095 12.9431C11.8595 12.6931 12 12.3539 12 12.0003V9.33366M9.33335 2.66699H13.3334M13.3334 2.66699V6.66699M13.3334 2.66699L6.66669 9.33366" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></a>
+                                    <a href="https://www.figma.com/proto/Q25EHPISOKBnBA5J37oVbL/-PORTFOLIO--New-Balance-Kids-RE-DESIGN?node-id=172-3056&p=f&t=cXadtyDNIZuiH4do-1&scaling=scale-down&content-scaling=fixed&page-id=172%3A1583" target="_blank">Tablet Ver.<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.66669 4.00033H4.00002C3.6464 4.00033 3.30726 4.1408 3.05721 4.39085C2.80716 4.6409 2.66669 4.98004 2.66669 5.33366V12.0003C2.66669 12.3539 2.80716 12.6931 3.05721 12.9431C3.30726 13.1932 3.6464 13.3337 4.00002 13.3337H10.6667C11.0203 13.3337 11.3594 13.1932 11.6095 12.9431C11.8595 12.6931 12 12.3539 12 12.0003V9.33366M9.33335 2.66699H13.3334M13.3334 2.66699V6.66699M13.3334 2.66699L6.66669 9.33366" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></a>
+                                    <a href="https://www.figma.com/proto/Q25EHPISOKBnBA5J37oVbL/-PORTFOLIO--New-Balance-Kids-RE-DESIGN?node-id=172-4967&p=f&t=cKujXZRMAyWjFpDk-8&scaling=scale-down&content-scaling=fixed&page-id=172%3A3757&hide-ui=1" target="_blank">Mobile Ver.<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.66669 4.00033H4.00002C3.6464 4.00033 3.30726 4.1408 3.05721 4.39085C2.80716 4.6409 2.66669 4.98004 2.66669 5.33366V12.0003C2.66669 12.3539 2.80716 12.6931 3.05721 12.9431C3.30726 13.1932 3.6464 13.3337 4.00002 13.3337H10.6667C11.0203 13.3337 11.3594 13.1932 11.6095 12.9431C11.8595 12.6931 12 12.3539 12 12.0003V9.33366M9.33335 2.66699H13.3334M13.3334 2.66699V6.66699M13.3334 2.66699L6.66669 9.33366" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <a href="https://elfish33.github.io/project_newBalanceKids/" target="_blank">Re-Designed Web (Github)</a>
+                            <a href="https://www.nbkorea.com/kidsMain.action" target="_blank">Original Web</a>
                         </div>
                     </div>
-                </div>
+                </section>
+                <section class="project_wrap swiper-slide" id="project2">
+                    <div class="project_content_box">
+                        <div class="prj_title">
+                            <h2>Re-Design & Publishing :</h2>
+                            <h2 class="main_prj">WMF KOREA</h2>
+                        </div>
+                        <dl class="project_info">
+                            <dt class="prj_info_title">프로젝트명</dt>
+                            <dd class="prj_info_desc">WMF코리아 리디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">설명</dt>
+                            <dd class="prj_info_desc">Cafe24 플랫폼을 활용하여 커머스와 브랜딩의 균형을 맞추고 UI/UX를 최적화한 프로젝트입니다</dd>
+        
+                            <dt class="prj_info_title">작업량</dt>
+                            <dd class="prj_info_desc">메인 페이지, 상품 목록 페이지 및 상품 상세페이지 디자인 및 카페24 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">스킬</dt>
+                            <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Cafe24, Figma</dd>
+        
+                            <dt class="prj_info_title">개선한 점</dt>
+                            <dd class="prj_info_desc">플랫폼 특성을 유지하면서 UI를 세련되게 리디자인, 가독성과 시각적 매력 강화, 커머스 중심에서 브랜드 아이덴티티를 강조, 다양한 라이프스타일 맥락에서 제품을 예쁘게 홍보</dd>
+        
+                            <dt class="prj_info_title">작업 시간</dt>
+                            <dd class="prj_info_desc">1주일</dd>
+        
+                            <dt class="prj_info_title">기여도</dt>
+                            <dd class="prj_info_desc">99%</dd>
+                        </dl>
+                        <div class="project_link_box">
+                            <a href="https://www.figma.com/proto/yPu4EQt1z6osjOtyJTqMR8/-PORTFLIO--WMF---RE-DESIGN?node-id=1-2&p=f&t=gKYXCap58q3bfNw8-8&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2&hide-ui=1" target="_blank">Prototype (Figma)</a>
+                            <a href="https://elfish33002.cafe24.com/skin-base" target="_blank">Re-Designed Web (Cafe24)</a>
+                            <a href="https://www.wmf.co.kr/WMF/main/" target="_blank">Original Web</a>
+                        </div>
+                    </div>
+                    <div class="project_img_box">
+                        <img src="./images/wmf_mockup.png" alt="WMF코리아 리디자인 및 퍼블리싱 결과 목업입니다">
+                    </div>
+                </section>
+                <section class="project_wrap swiper-slide" id="project3">
+                    <div class="project_img_box">
+                        <img src="./images/demar__mockup.png" alt="디말3 리디자인 및 퍼블리싱 결과 목업입니다">
+                    </div>
+                    <div class="project_content_box">
+                        <div class="prj_title">
+                            <h2>Re-Design & Publishing :</h2>
+                            <h2 class="main_prj">DEMAR 3</h2>
+                        </div>
+                        <dl class="project_info">
+                            <dt class="prj_info_title">프로젝트명</dt>
+                            <dd class="prj_info_desc">디마르3 리디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">설명</dt>
+                            <dd class="prj_info_desc">디마르3 메인페이지 리뉴얼 프로젝트입니다</dd>
+        
+                            <dt class="prj_info_title">작업량</dt>
+                            <dd class="prj_info_desc">메인 페이지 디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">스킬</dt>
+                            <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
+        
+                            <dt class="prj_info_title">개선한 점</dt>
+                            <dd class="prj_info_desc">전체적인 레이아웃과 비주얼을 새롭게 구성하여 브랜드 이미지 강화, 상품 콜렉션/테마별 배열로 홍보 효과 및 편의성 개선</dd>
+        
+                            <dt class="prj_info_title">작업 시간</dt>
+                            <dd class="prj_info_desc">5일</dd>
+        
+                            <dt class="prj_info_title">기여도</dt>
+                            <dd class="prj_info_desc">99%</dd>
+                        </dl>
+                        <div class="project_link_box">
+                            <a href="https://www.figma.com/proto/IwqNfZzutQ362WbJMgqRux/-PORTFOLIO--Dimar3-re-design?node-id=3-2&p=f&t=dlFTSutv2ZV354rm-8&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A2&hide-ui=1" target="_blank">Prototype (Figma)</a>
+                            <a href="#">Re-Designed Web (Github)</a>
+                            <a href="https://demar3.co.kr/" target="_blank">Original Web</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project_wrap swiper-slide" id="project4">
+                    <div class="project_content_box">
+                        <div class="prj_title">
+                            <h2>Design & Publishing :</h2>
+                            <h2 class="main_prj">LONDON BAGEL MUSEUM</h2>
+                        </div>
+                        <dl class="project_info">
+                            <dt class="prj_info_title">프로젝트명</dt>
+                            <dd class="prj_info_desc">런던베이글 뮤지엄 소개 페이지 디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">설명</dt>
+                            <dd class="prj_info_desc">런던베이글 뮤지엄의 신규 페이지를 기획하고, 브랜드 아이덴티티에 맞춰 디자인을 완성한 프로젝트</dd>
+        
+                            <dt class="prj_info_title">작업량</dt>
+                            <dd class="prj_info_desc">소개 페이지 디자인 및 퍼블리싱</dd>
+        
+                            <dt class="prj_info_title">스킬</dt>
+                            <dd class="prj_info_desc">HTML, CSS, Vanilla Javascript, Figma, Photoshop</dd>
+        
+                            <dt class="prj_info_title">개선한 점</dt>
+                            <dd class="prj_info_desc">브랜드 세계관을 시각적으로 풀어낸 웹페이지 콘텐츠 설계</dd>
+        
+                            <dt class="prj_info_title">작업 시간</dt>
+                            <dd class="prj_info_desc">1주일</dd>
+        
+                            <dt class="prj_info_title">기여도</dt>
+                            <dd class="prj_info_desc">99%</dd>
+                        </dl>
+                        <div class="project_link_box">
+                            <div class="figma_wrap">
+                                <button type="button" id="london_figma_btn">Prototype (Figma)<img src="./images/arrow_down.svg" alt="더보기"></button>
+                                <div class="figma_box" id="london_figma_pop">
+                                    <a href="https://www.figma.com/proto/ljrdlap4NAOZluQAua6YZq/-PORTFOLIO--LBM-re-design?node-id=2-2&p=f&t=05N2j63QZABFx2lY-8&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&hide-ui=1" target="_blank">Desktop Ver.
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.66669 4.00033H4.00002C3.6464 4.00033 3.30726 4.1408 3.05721 4.39085C2.80716 4.6409 2.66669 4.98004 2.66669 5.33366V12.0003C2.66669 12.3539 2.80716 12.6931 3.05721 12.9431C3.30726 13.1932 3.6464 13.3337 4.00002 13.3337H10.6667C11.0203 13.3337 11.3594 13.1932 11.6095 12.9431C11.8595 12.6931 12 12.3539 12 12.0003V9.33366M9.33335 2.66699H13.3334M13.3334 2.66699V6.66699M13.3334 2.66699L6.66669 9.33366" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.figma.com/proto/ljrdlap4NAOZluQAua6YZq/-PORTFOLIO--LBM-re-design?node-id=106-1545&p=f&t=IQ7a70tpLDQqrrgh-8&scaling=scale-down&content-scaling=fixed&page-id=106%3A3&hide-ui=1" target="_blank">Mobile Ver.
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.66669 4.00033H4.00002C3.6464 4.00033 3.30726 4.1408 3.05721 4.39085C2.80716 4.6409 2.66669 4.98004 2.66669 5.33366V12.0003C2.66669 12.3539 2.80716 12.6931 3.05721 12.9431C3.30726 13.1932 3.6464 13.3337 4.00002 13.3337H10.6667C11.0203 13.3337 11.3594 13.1932 11.6095 12.9431C11.8595 12.6931 12 12.3539 12 12.0003V9.33366M9.33335 2.66699H13.3334M13.3334 2.66699V6.66699M13.3334 2.66699L6.66669 9.33366" stroke="#B8B8B8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#">Re-Designed Web (Github)</a>
+                        </div>
+                    </div>
+                    <div class="project_img_box">
+                        <img src="./images/lbm_mockup.png" alt="뉴발란스 키즈 리디자인 및 퍼블리싱 결과 목업입니다">
+                    </div>
+                </section>
+                <section class="graphic_design swiper-slide">
+                    <h1 class="sect_title">GRAPHIC DESIGN</h1>
+                    <div class="graphic_wrap">
+                        <div class="swiper" id="graphic_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slide1"><img src="./images/graphic_slide.png" alt="뉴발란스 키즈 SNS 피드 디자인" loading="lazy"></div>
+                                <div class="swiper-slide slide2"><img src="./images/graphic_slide.png" alt="뉴발란스 키즈 SNS 피드 디자인" loading="lazy"></div>
+                                <div class="swiper-slide slide3"><img src="./images/graphic_slide.png" alt="뉴발란스 키즈 SNS 피드 디자인" loading="lazy"></div>
+                                <div class="swiper-slide slide4"><img src="./images/graphic_slide.png" alt="뉴발란스 키즈 SNS 피드 디자인" loading="lazy"></div>
+                                <div class="swiper-slide slide5"><img src="./images/graphic_slide.png" alt="뉴발란스 키즈 SNS 피드 디자인" loading="lazy"></div>
+                            </div>
+                    </div>
+                    </div>
+                </section>
+                <section class="experience swiper-slide">
+                    <h1 class="sect_title">Experience</h1>
+                    <div class="employement_wrap">
+                        <div class="exp_title">
+                            <img src="./images/employement.svg" alt="경력 아이콘">
+                            <h2 class="exp_section_title">Employement</h2>
+                        </div>
+                        <div class="employement_info">
+                            <div class="employement_card">
+                                <h3 class="card_title">(주)디엘이앤씨(구.대림산업)</h3>
+                                <p class="card_position">플랜트 본부 - 통번역 전문가</p>
+                                <p class="card_date">2021/09 ~ 2025/06</p>
+                            </div>
+                            <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
+                                    <path
+                                        d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
+                                        fill="#F5F5F5" />
+                                </svg></div>
+                            <div class="employement_card">
+                                <h3 class="card_title">(주)게임덱스</h3>
+                                <p class="card_position">모바일 게임 현지화 전문가</p>
+                                <p class="card_date">2021/02 ~ 2021/09</p>
+                            </div>
+                            <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
+                                    <path
+                                        d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
+                                        fill="#F5F5F5" />
+                                </svg></div>
+                            <div class="employement_card">
+                                <h3 class="card_title">프리랜서</h3>
+                                <p class="card_position">한·영·러 통번역 및 감수</p>
+                                <p class="card_date">2012/09 ~ 2025/06</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edu_wrap">
+                        <div class="exp_title">
+                            <img src="./images/education.svg" alt="학력 아이콘">
+                            <h2 class="exp_section_title">Education</h2>
+                        </div>
+                        <div class="edu_info">
+                            <div class="edu_card">
+                                <div class="title_tag">
+                                    <h3 class="card_title">인천그린컴퓨터아카데미</h3>
+                                    <span>수료</span>
+                                </div>
+                                <p class="card_position">UI/UX 프론트엔드 반응형웹디자인&<br>웹퍼블리셔 (웹,앱,피그마) 개발 양성과정</p>
+                                <p class="card_date">2025/07 ~ 2025/12</p>
+                            </div>
+                            <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
+                                    <path
+                                        d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
+                                        fill="#F5F5F5" />
+                                </svg></div>
+                            <div class="edu_card">
+                                <div class="title_tag">
+                                    <h3 class="card_title">중앙대 국제대학원</h3>
+                                    <span>석사 졸업</span>
+                                </div>
+                                <p class="card_position">한·러 전문통번역학과</p>
+                                <p class="card_date">2019/03 ~ 2021/02</p>
+                            </div>
+                            <div class="next_img"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" transform="matrix(-1 0 0 1 24 0)" fill="#4F9191" />
+                                    <path
+                                        d="M14.69 6.70978C14.7827 6.80229 14.8562 6.91218 14.9064 7.03315C14.9566 7.15413 14.9824 7.28381 14.9824 7.41478C14.9824 7.54575 14.9566 7.67543 14.9064 7.7964C14.8562 7.91738 14.7827 8.02726 14.69 8.11978L10.81 11.9998L14.69 15.8798C14.877 16.0668 14.982 16.3204 14.982 16.5848C14.982 16.8492 14.877 17.1028 14.69 17.2898C14.503 17.4768 14.2494 17.5818 13.985 17.5818C13.7206 17.5818 13.467 17.4768 13.28 17.2898L8.68998 12.6998C8.59727 12.6073 8.52373 12.4974 8.47355 12.3764C8.42336 12.2554 8.39753 12.1257 8.39753 11.9948C8.39753 11.8638 8.42336 11.7341 8.47355 11.6132C8.52373 11.4922 8.59727 11.3823 8.68998 11.2898L13.28 6.69978C13.66 6.31978 14.3 6.31978 14.69 6.70978Z"
+                                        fill="#F5F5F5" />
+                                </svg></div>
+                            <div class="edu_card">
+                                <div class="title_tag">
+                                    <h3 class="card_title">벨라루스 국립대학교</h3>
+                                    <span>학사 졸업</span>
+                                </div>
+                                <p class="card_position">중국어학과</p>
+                                <p class="card_date">2013/09 ~ 2018/06</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="collaboration swiper-slide">
+                    <h1 class="sect_title">Let's collaborate</h1>
+                    <div class="coolab_wrap">
+                        <div class="collab_img"><img src="./images/my photo_small.png" alt="디블리셔 폴리나입니다"></div>
+                        <div class="collab_right">
+                            <h2>Thank you for reading!<br>언제든지 연락 주시면 감사하겠습니다!</h2>
+                            <div class="collab_link_wrap">
+                                <div class="link_box">
+                                    <a href="mailto:elfish33@gmail.com">
+                                        <img src="./images/gmail.png" alt="g-mail">
+                                        <span class="link_name">E-mail</span>
+                                        <img src="./images/link.png" alt="바로가기">
+                                    </a>
+                                </div>
+                                <div class="link_box">
+                                    <a href="#" class="kakao">
+                                        <img src="./images/kakao.png" alt="Kakao">
+                                        <span class="link_name">Kakao QR</span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23435 5.83407C4.38437 5.6841 4.58782 5.59985 4.79995 5.59985C5.01208 5.59985 5.21553 5.6841 5.36555 5.83407L7.99995 8.46847L10.6344 5.83407C10.7081 5.75767 10.7964 5.69672 10.894 5.65479C10.9916 5.61287 11.0966 5.5908 11.2028 5.58987C11.3091 5.58895 11.4144 5.60919 11.5127 5.64942C11.611 5.68964 11.7004 5.74904 11.7755 5.82416C11.8506 5.89927 11.91 5.98859 11.9502 6.08691C11.9904 6.18523 12.0107 6.29057 12.0098 6.3968C12.0088 6.50302 11.9868 6.60799 11.9448 6.7056C11.9029 6.8032 11.842 6.89148 11.7656 6.96527L8.56555 10.1653C8.41553 10.3153 8.21208 10.3995 7.99995 10.3995C7.78782 10.3995 7.58437 10.3153 7.43435 10.1653L4.23435 6.96527C4.08437 6.81525 4.00012 6.61181 4.00012 6.39967C4.00012 6.18754 4.08437 5.9841 4.23435 5.83407Z" fill="#868686"/>
+                                        </svg>
+                                        <img class="kakao_qr" src="./images/kakaoQR.png" alt="카카오 QR코드입니다">
+                                    </a>
+                                </div>
+                                <div class="link_box">
+                                    <a href="https://www.linkedin.com/in/polina-translatorkr-en-ru/" target="_blank">
+                                        <img src="./images/linkedin.png" alt="Linkedin">
+                                        <span class="link_name">LinkedIn</span>
+                                        <img src="./images/link.png" alt="바로가기">
+                                    </a>
+                                </div>
+                                <div class="link_box">
+                                    <a href="https://github.com/elfish33" target="_blank">
+                                        <img src="./images/github.png" alt="Github">
+                                        <span class="link_name">GitHub</span>
+                                        <img src="./images/link.png" alt="바로가기">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 

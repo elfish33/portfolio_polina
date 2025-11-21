@@ -1,423 +1,538 @@
 @use './common.scss' as *;
 
-body {
-    /* max-width: 1920px; */
-    margin: 0 auto;
-    header {
-        position: sticky; z-index: 999;
-        top: 0; background-color: #fff;
-        nav {
-            padding: 20px 0;
-            width: 100%;
-            margin: 0 auto;
-            ul {
-                @include flRow;
-                gap: 25px;
-                justify-content: center;
-                align-items: center;
-                li {
-                    @include navBar;
-                    width: max-content;
-                    transition: all 0.5s ease;
-                    &:hover {
-                        background-color: #A5B9D7;
-                        border-radius: 30px;
-                    }
-                    a {
-                        line-height: 180%;//클릭 영역을 넓히기
-                        font-size: 0.9rem;
-                        font-weight: $light;
-                        letter-spacing: $min2;
-                        position: relative;
-                        padding-bottom: 4px;
+html {
+    scroll-behavior: smooth;
+    body {
+        overflow: hidden; /* hor scroll 없애기 */
+        margin: 0 auto;
+        header {
+            position: sticky; z-index: 999;
+            top: 0; background-color: #fff;
+            nav {
+                padding: 20px 0;
+                width: 100%;
+                margin: 0 auto;
+                ul {
+                    @include flRow;
+                    gap: 25px;
+                    justify-content: center;
+                    align-items: center;
+                    li {
+                        @include navBar;
+                        width: max-content;
                         transition: all 0.5s ease;
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            bottom: 0; left: 50%;
-                            transform: translateX(-50%);
-                            height: 2px; width: 0px;
-                            background-color: #FFF;
-                            transition: width 0.6s ease;
+                        &:hover {
+                            background-color: #A5B9D7;
+                            border-radius: 30px;
                         }
-                        &:hover {color: #FFF;}
-                        &:hover::after {width: 65%;}
-                    }
-                }
-            }
-        }
-    }
-    main {
-        section {
-            padding: $padTB100; 
-            max-width: 1550px; 
-            margin: 0 auto;
-        }
-        .greetings {
-            /* background-color: #F8F4F3; */
-            height: 100vh; max-width: 100%;
-            background: linear-gradient(167deg,rgba(165, 185, 215, 1) 0%, rgba(252, 245, 255, 1) 47%, rgba(245, 245, 245, 1) 95%);
-            .greetings_wrap {
-                width: 75%; margin: 50px auto;
-                @include flRow;
-                justify-content: space-between; align-items: center;
-                h1 {
-                    font-size: $size54;
-                    font-weight: $bold;
-                    line-height: 150%;
-                    letter-spacing: $min2;
-                    font-family: 'Comfortaa';
-                    padding: 120px 50px;
-                }
-                .moto {
-                    @include flCol; gap: 20px;
-                    h2 {
-                        font-size: $size34;
-                        text-align: $textCenter;
-                        em {color: #2dbb9b;}
-                    }
-                    p {
-                        font-size: $size20;
-                        
-                    }
-                }
-            }
-            
-            .keyword_wrapper {
-                margin-top: 150px;
-                white-space: nowrap; overflow: hidden;
-                .keyword_content {
-                    display: inline-flex;
-                    gap: 35px;
-                    justify-content: center;
-                    animation: hor_scroll 60s linear infinite;
-                    background: #fffefe;
-                    span {
-                        font-size: 1.2rem;
-                        letter-spacing: $min2;
-                        line-height: $line180;
-                    }
-                }
-            }
-        }
-        .intro {
-            background: #F8F4F3;
-            max-width: 100vw; max-height: 100vh;
-            width: 100%;
-            .contents_wrap {
-                @include flRow;
-                gap: 100px; max-width: 1550px; margin: 0 auto;
-                .left_wrap {
-                    max-width: 577px; max-height: 800px;
-                    position: relative;
-                    img {width: 100%; height: 100%; object-fit: cover;}
-                    &:before {
-                        content: '';
-                        display: block;
-                        width: 140px; height: 100%;
-                        background-color: #b1835a;
-                        position: absolute;
-                    }
-                }
-                .right_wrap {
-                    width: calc(100% - (577px + 100px));
-                    @include flCol; gap: 20px;
-                    .sect_title  {
-                        @include sectionTitle;
-                        padding-bottom: 140px;
-                    }
-                    .sect_content {
-                        @include sectionContent;
-                        line-height: 200%;
-                        font-size: 1.10rem;
-                    }
-                }
-            }
-        }
-        .skills {
-            max-width: 100%; height: 100vh;
-            background: linear-gradient(191deg,rgba(245, 245, 245, 1) 19%, rgba(233, 232, 246, 1) 60%, rgba(255, 255, 255, 1) 95%);
-            .content_wrap {
-                max-width: 1550px;
-                margin: 60px auto 0;
-                .sect_title {@include sectionTitle;}
-                .skills_wrap {
-                    @include flRow;
-                    gap: 120px; justify-content: center;
-                    align-items: center;
-                    padding-top: 60px;
-                    .skill_col {
-                        @include flCol; gap: 50px;
-                        align-items: flex-start;
-                        justify-content: center;
-                        .skill_card {
-                            @include flRow; gap: 25px;
-                            justify-content: center; align-items: center;
-                            &:hover .skill_img {animation: skill_rotate 2s ease-in-out both;}
-                            .skill_img {
-                                img {}
-                            }
-                            .skill_title_tag {
-                                @include flCol; gap: 5px;
-                                justify-content: center; align-items: center;
-                                .skill_title {@include skillTitle;}
-                                .adv_skill {@include adv_skill;}
-                                .int_skill {@include int_skill;}
-                            }
-                            .skill_details {
-                                @include flCol; gap: 8px;
-                                .skill_content {@include sectionContent;}
-                            }
-                        }
-                    }
-                }
-                }
-        }
-        .facts {
-            height: 100vh;
-            .sect_title {
-                @include sectionTitle;
-                line-height: 80%;
-                em {font-size: 2.188rem;}
-            }
-            .fact_wrap {
-                @include flRow;
-                align-items: center;
-                justify-content: space-evenly;
-                margin-top: 60px; width: 80%; margin: 130px auto 0;
-                .fact1 {}
-                .fact2 {}
-                .fact3 {}
-                .fact4 {}
-                .fact_card {
-                    @include flCol;
-                    gap: 30px;
-                    justify-content: center;
-                    align-items: center;
-                    //transition: transform 0.6s ease;
-                    &:hover .fact_circle {
-                        animation: fact_scale 2.5s ease-in-out infinite;
-                        box-shadow: 0 0 15px rgba(165, 185, 215, 0.6);
-                    }
-                    &:hover .circle1 {background: linear-gradient(135deg, #82b6fa 0%, #5677B3 100%);}
-                    &:hover .circle2 {background: linear-gradient(135deg, #2E7D5A 0%, #63C7A3 100%);}
-                    &:hover .circle3 {background: linear-gradient(135deg, #AFC8FF 0%, #D0B8E8 100%);
-                    }
-                    &:hover .circle4 {background: linear-gradient(135deg, #FFD8A8 0%, #FBC4B2 100%);
-                    }
-                    &:hover .fact_circle .fact_point {
-                        color: #f9f9f9;
-                    }
-                    &:hover .fact_info .fact_desc {
-                        opacity: 1;
-                        transform: translateY(0px);
-                    }
-                    .fact_circle {
-                        border-radius: 100%;
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                        padding: 2rem;
-                        width: 200px;
-                        height: 200px;
-                        @include flCol;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-                        .fact_point {font-size: 2rem;
-                            font-weight: bold;
-                            color: #30476C;
-                        }
-                    }
-                    .circle1 {background: linear-gradient(135deg, #7babe6 0%, #70a0ff 100%);}
-                    .circle2 {background: linear-gradient(135deg, #83d3ad 0%, #8FF2C4 100%);}
-                    .circle3 {background: linear-gradient(135deg, #C9E4FF 0%, #E2D4F0 100%);}
-                    .circle4 {background: linear-gradient(135deg, #FFF0D6 0%, #FDE2D3 100%);}
-                    .fact_info {
-                        @include flCol;
-                        gap: 10px;
-                        .fact_title {
-                            @include flRow;
-                            gap: 10px;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: 1.2rem; //19px
-                            font-weight: $med;
-                            line-height: $line130;
+                        a {
+                            line-height: 180%;//클릭 영역을 넓히기
+                            font-size: 0.9rem;
+                            font-weight: $light;
                             letter-spacing: $min2;
-                        }
-                        .fact_desc {
-                            font-size: 0.875rem; //14px
-                            line-height: $line150;
-                            letter-spacing: $min2;
-                            text-align: $textCenter;
-                            opacity: 0;
-                            transform: translateY(10px);
+                            position: relative;
+                            padding-bottom: 4px;
                             transition: all 0.5s ease;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0; left: 50%;
+                                transform: translateX(-50%);
+                                height: 2px; width: 0px;
+                                background-color: #FFF;
+                                transition: width 0.6s ease;
+                            }
+                            &:hover {color: #FFF;}
+                            &:hover::after {width: 65%;}
                         }
                     }
                 }
             }
         }
-        .project_content {
-            .sect_title {@include sectionTitle;}
-            .project_list {
-                margin-top: 25px;
-                @include flCol; gap: 25px;
-                    justify-content: center; align-items: flex-start;
-                > li {
-                    @include flRow; gap: 30px;
-                    justify-content: flex-start; align-items: center;
-                    border-bottom: 1.7px solid #f5f5f5;
-                    padding-bottom: 15px;
-                    .project_menu_title {
-                        @include flRow; gap: 20px;
-                        justify-content: flex-start; align-items: center;
-                        @include projectMenuTitle; line-height: 32px;
-                        em {
-                            
-                            font-weight: 500; font-size: 1.875rem;}
-                    }
-                    .project_tag_wrap {
-                        @include flRow; gap: 10px;
-                        justify-content: flex-start; align-items: center;
-                        .project_tag {
-                            @include projectTag;
-                            transition: all 0.4s linear;
-                            &:hover {
-                                padding: 4px 15px;
-                                background-color: #A5B9D7; color: #fff;}
-                        }
-                    }
-                }
+        .fixed_top_btn {
+                
+            button {
+                position: fixed;
+                bottom: 50px;
+                right: 30px; z-index: 998;
             }
         }
-        .project_wrap {
-            max-width: 1920px; width: 100%;
-            @include flRow;
-            .project_img_box {
-                img {}
-            }
-            .project_content_box {
-                width: calc(100% - 849px);
-                @include flCol; gap: 40px;
-                justify-content: center; align-items: flex-start;
-                padding: 0 185px;
-                .prj_title {
-                    > h2 {
-                        font-size: 2rem;
-                        font-weight: $med;
-                        &:first-child {
-                            font-size: 1.8rem;
-                            font-weight: normal;
-                        }
+        main {
+            #main_swiper {
+                .swiper-wrapper {
+                    height: 100vh;
+                    .swiper-slide {
+                        width: 100vw; height: 100vh;
                     }
-                }
-                .project_info {
-                    @include flCol; gap: 10px;
-                    justify-content: center; align-items: flex-start;
-                    .prj_info_title {}
-                    .prj_info_desc {}
-                }
-                .project_link_box {
-                    > a {}
-                }
-            }
-        }
-        .graphic_design {}
-        .experience {
-            @include flCol;
-            gap: 70px;
-            .sect_title {@include sectionTitle;}
-            .employement_wrap {
-                @include flCol;
-                .exp_title {
-                    @include flRow; gap: 20px;
-                    justify-content: center; align-items: center;
-                    img {}
-                    .exp_section_title {@include expSectionTitle;}
-                }
-                .employement_info {
-                    margin-top: 30px;
-                    @include flRow;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    .employement_card {
-                        @include exp_card;
-                        .card_title {@include cardTitle;}
-                        .card_position {@include cardPosition}
-                        .card_date {@include cardDate}
+                    section {
+                        padding: $padTB100; 
+                        max-width: 1550px;
+                        height: 100vh;
+                        margin: 0 auto;
                     }
-                    .next_img {
-                        svg {}
-                    }
-                }
-            }
-            .edu_wrap {
-                @include flCol;
-                .exp_title {
-                    @include flRow; gap: 20px;
-                    justify-content: center; align-items: center;
-                    img {}
-                    .exp_section_title {@include expSectionTitle;}
-                }
-                .edu_info {
-                    margin-top: 30px;
-                    @include flRow;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    .edu_card {
-                        @include exp_card;
-                        .title_tag {
-                            width: 100%;
+                    .greetings {
+                        /* background-color: #F8F4F3; */
+                        height: 100vh; max-width: 100%;
+                        background: linear-gradient(167deg,rgba(165, 185, 215, 1) 0%, rgba(252, 245, 255, 1) 47%, rgba(245, 245, 245, 1) 95%);
+                        .greetings_wrap {
+                            width: 75%; margin: 50px auto;
                             @include flRow;
-                            justify-content: space-between;
-                            align-items: center;
-                            .card_title {@include cardTitle;}
-                            span {@include cardEduStatus;}
-                        }
-                        .card_position {@include cardPosition}
-                        .card_date {@include cardDate}
-                    }
-                    .next_img {}
-                }
-            }
-        }
-        .collaboration {
-            .sect_title {@include sectionTitle; padding-bottom: 60px;}
-            .coolab_wrap {
-                @include flRow;
-                gap: 50px;
-                .collab_img {
-                    img {}
-                }
-                .collab_right {
-                    width: calc(100% - (528px + 50px));
-                    padding: 50px 0;
-                    @include flCol; gap: 60px;
-                    justify-content: flex-start; align-items: center;
-                    h2 {
-                        font-size: $size30;
-                        line-height: $line130;
-                        letter-spacing: $min2;
-                        text-align: $textCenter;
-                    }
-                    .collab_link_wrap {
-                        @include flRow; gap: 10px;
-                        justify-content: space-evenly; align-items: center;
-                        .link_box {
-                            a {
-                                width: 171px; height: 60px;
-                                @include flRow; align-items: center;
-                                justify-content: center; gap: 10px;
-                                img {}
-                                .link_name {
-                                    line-height: $line130;
-                                    letter-spacing: $min2;
+                            justify-content: space-between; align-items: center;
+                            h1 {
+                                font-size: $size54;
+                                font-weight: $bold;
+                                line-height: 150%;
+                                letter-spacing: $min2;
+                                font-family: 'Comfortaa';
+                                padding: 120px 50px;
+                            }
+                            .moto {
+                                @include flCol; gap: 20px;
+                                h2 {
+                                    font-size: $size34;
+                                    text-align: $textCenter;
+                                    em {color: #2dbb9b;}
+                                }
+                                p {
+                                    font-size: $size20;
+                                    
                                 }
                             }
                         }
-                        .kakao {
-                            position: relative;
-                            .kakao_qr {position: absolute; top: 50px;}
+                        
+                        .keyword_wrapper {
+                            margin-top: 150px;
+                            white-space: nowrap; overflow: hidden;
+                            .keyword_content {
+                                display: inline-flex;
+                                gap: 35px;
+                                justify-content: center;
+                                animation: hor_scroll 60s linear infinite;
+                                background: #fffefe;
+                                span {
+                                    font-size: 1.2rem;
+                                    letter-spacing: $min2;
+                                    line-height: $line180;
+                                }
+                            }
+                        }
+                    }
+                    .intro {
+                        background: #F8F4F3;
+                        max-width: 100vw; max-height: 100vh;
+                        width: 100%;
+                        .contents_wrap {
+                            @include flRow;
+                            gap: 100px; max-width: 1550px; margin: 0 auto;
+                            .left_wrap {
+                                max-width: 577px; max-height: 800px;
+                                position: relative;
+                                img {width: 100%; height: 100%; object-fit: cover;}
+                                &:before {
+                                    content: '';
+                                    display: block;
+                                    width: 140px; height: 100%;
+                                    background-color: #b1835a;
+                                    position: absolute;
+                                }
+                            }
+                            .right_wrap {
+                                width: calc(100% - (577px + 100px));
+                                @include flCol; gap: 20px;
+                                .sect_title  {
+                                    @include sectionTitle;
+                                    padding-bottom: 140px;
+                                }
+                                .sect_content {
+                                    @include sectionContent;
+                                    line-height: 200%;
+                                    font-size: 1.10rem;
+                                }
+                            }
+                        }
+                    }
+                    .skills {
+                        max-width: 100%; height: 100vh;
+                        background: linear-gradient(191deg,rgba(245, 245, 245, 1) 19%, rgba(233, 232, 246, 1) 60%, rgba(255, 255, 255, 1) 95%);
+                        .content_wrap {
+                            max-width: 1550px;
+                            margin: 60px auto 0;
+                            .sect_title {@include sectionTitle;}
+                            .skills_wrap {
+                                @include flRow;
+                                gap: 120px; justify-content: center;
+                                align-items: center;
+                                padding-top: 60px;
+                                .skill_col {
+                                    @include flCol; gap: 50px;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    .skill_card {
+                                        @include flRow; gap: 25px;
+                                        justify-content: center; align-items: center;
+                                        &:hover .skill_img {animation: skill_rotate 2s ease-in-out both;}
+                                        .skill_img {
+                                            img {}
+                                        }
+                                        .skill_title_tag {
+                                            @include flCol; gap: 5px;
+                                            justify-content: center; align-items: center;
+                                            .skill_title {@include skillTitle;}
+                                            .adv_skill {@include adv_skill;}
+                                            .int_skill {@include int_skill;}
+                                        }
+                                        .skill_details {
+                                            @include flCol; gap: 8px;
+                                            .skill_content {@include sectionContent; font-size: 1rem;}
+                                        }
+                                    }
+                                }
+                            }
+                            }
+                    }
+                    .facts {
+                        height: 100vh;
+                        .sect_title {
+                            @include sectionTitle;
+                            line-height: 80%;
+                            em {font-size: 2.188rem;}
+                        }
+                        .fact_wrap {
+                            @include flRow;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            margin-top: 60px; width: 80%; margin: 130px auto 0;
+                            .fact1 {}
+                            .fact2 {}
+                            .fact3 {}
+                            .fact4 {}
+                            .fact_card {
+                                @include flCol;
+                                gap: 30px;
+                                justify-content: center;
+                                align-items: center;
+                                //transition: transform 0.6s ease;
+                                &:hover .fact_circle {
+                                    animation: fact_scale 2.5s ease-in-out infinite;
+                                    box-shadow: 0 0 15px rgba(165, 185, 215, 0.6);
+                                }
+                                &:hover .circle1 {background: linear-gradient(135deg, #82b6fa 0%, #5677B3 100%);}
+                                &:hover .circle2 {background: linear-gradient(135deg, #2E7D5A 0%, #63C7A3 100%);}
+                                &:hover .circle3 {background: linear-gradient(135deg, #AFC8FF 0%, #D0B8E8 100%);
+                                }
+                                &:hover .circle4 {background: linear-gradient(135deg, #FFD8A8 0%, #FBC4B2 100%);
+                                }
+                                &:hover .fact_circle .fact_point {
+                                    color: #f9f9f9;
+                                }
+                                &:hover .fact_info .fact_desc {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                }
+                                .fact_circle {
+                                    border-radius: 100%;
+                                    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                                    padding: 2rem;
+                                    width: 200px;
+                                    height: 200px;
+                                    @include flCol;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                    .fact_point {font-size: 1.9rem;
+                                        font-weight: bold;
+                                        color: #30476C;
+                                    }
+                                }
+                                .circle1 {background: linear-gradient(135deg, #7babe6 0%, #70a0ff 100%);}
+                                .circle2 {background: linear-gradient(135deg, #83d3ad 0%, #8FF2C4 100%);}
+                                .circle3 {background: linear-gradient(135deg, #C9E4FF 0%, #E2D4F0 100%);}
+                                .circle4 {background: linear-gradient(135deg, #FFF0D6 0%, #FDE2D3 100%);}
+                                .fact_info {
+                                    @include flCol;
+                                    gap: 10px;
+                                    .fact_title {
+                                        @include flRow;
+                                        gap: 10px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        font-size: 1.2rem; //19px
+                                        font-weight: $med;
+                                        line-height: $line130;
+                                        letter-spacing: $min2;
+                                    }
+                                    .fact_desc {
+                                        font-size: 0.875rem; //14px
+                                        line-height: $line150;
+                                        letter-spacing: $min2;
+                                        text-align: $textCenter;
+                                        opacity: 0;
+                                        transform: translateY(10px);
+                                        transition: all 0.5s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .project_content {
+                        height: 70vh;
+                        @include flRow;
+                        justify-content: space-evenly; align-items: center;
+                        .sect_title {@include sectionTitle;}
+                        .project_list {
+                            margin-top: 25px;
+                            @include flCol; gap: 25px;
+                                justify-content: center; align-items: flex-start;
+                            > li {
+                                @include flRow; gap: 30px;
+                                justify-content: flex-start; align-items: center;
+                                border-bottom: 1.7px solid #f5f5f5;
+                                padding-bottom: 15px;
+                                .project_menu_title {
+                                    @include flRow; gap: 20px;
+                                    justify-content: flex-start; align-items: center;
+                                    @include projectMenuTitle; line-height: 32px;
+                                    em {
+                                        padding-right: 20px;
+                                        font-weight: 500; font-size: 1.875rem;}
+                                }
+                                .project_tag_wrap {
+                                    @include flRow; gap: 10px;
+                                    justify-content: flex-start; align-items: center;
+                                    .project_tag {
+                                        @include projectTag;
+                                        transition: all 0.4s linear;
+                                        &:hover {
+                                            padding: 4px 15px;
+                                            background-color: #A5B9D7; color: #fff;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .project1 {background: linear-gradient(90deg,rgba(215, 215, 215, 1) 46%, rgba(245, 245, 245, 1) 78%);}
+                    #project3 {
+                        background: linear-gradient(242deg,rgba(248, 244, 243, 1) 68%, rgba(245, 245, 245, 1) 27%);
+                        > .project_content_box {
+                            .project_link_box {
+                                > a {background-color: #e6e6e6;
+                                    transition: all 0.4s linear;
+                                &:hover {
+                                    background-color: #A5B9D7; color: #fff;
+                                }
+                                }
+                            }
+                        } 
+                    }
+                    #project2 {
+                        background: #f5f5f5;
+                        > .project_content_box {
+                            .project_link_box {
+                                > a {background-color: #e6e6e6;
+                                    transition: all 0.4s linear;
+                                &:hover {
+                                    background-color: #A5B9D7; color: #fff;
+                                }
+                                }
+                            }
+                        } 
+                    }
+                    .project_wrap {
+                        max-width: 1920px; width: 100%;
+                        @include flRow;
+                        .project_img_box {
+                            img {}
+                        }
+                        .project_content_box {
+                            width: calc(100% - 849px);
+                            @include flCol; gap: 40px;
+                            justify-content: center; align-items: flex-start;
+                            padding: 0 185px;
+                            .prj_title {
+                                > h2 {
+                                    font-size: 2rem;
+                                    font-weight: $med;
+                                    &:first-child {
+                                        font-size: 1rem;
+                                        font-weight: normal;
+                                        padding-bottom: 4px;
+                                    }
+                                }
+                            }
+                            .project_info {
+                                display: grid; grid-template-columns: 150px 500px;
+                                .prj_info_title {
+                                    font-size: $size18;
+                                    font-weight: $med;
+                                    line-height: 200%;
+                                }
+                                .prj_info_desc {
+                                    font-size: 1rem;
+                                    line-height: 200%;
+                                }
+                            }
+                            .project_link_box {
+                                > a {@include flRow; gap: 4px; justify-content: flex-start; align-items: center; background-color: #e6e6e6;}
+                                @include flRow; gap: 20px;
+                                .figma_wrap {
+                                    position: relative;
+                                    > button {
+                                        @include linkBtn;
+                                        transition: all 0.5s ease;
+                                        @include flRow; gap: 8px;
+                                        justify-content: center; align-items: center;
+                                        &:hover {
+                                            background-color: #A5B9D7;
+                                            border-radius: 30px;
+                                            color: #fff;
+                                        }
+                                    }
+                                    #balance_figma_btn {}
+                                    #london_figma_btn {}
+                                    #balance_figma_pop { opacity: 0;}
+                                    #london_figma_pop {bottom: -70px; opacity: 0;}
+                                }
+                                > a {
+                                    @include linkBtn; 
+                                    transition: all 0.5s ease;
+                                    &:hover {
+                                        background-color: #A5B9D7;
+                                        border-radius: 30px;
+                                        color: #fff;
+                                    }
+                                }
+                                .figma_box {
+                                    @include flCol; gap: 15px;
+                                    position: absolute;
+                                    bottom: -100px; left: 20px;
+                                    > a {
+                                        color: #575757;
+                                        transition: all 0.3s ease;
+                                        &:hover {
+                                            color: #549b78; font-weight: 500;
+                                        }
+                                        &:hover > svg path {
+                                            stroke: #549b78;
+                                            transition: stroke 0.3s ease;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .graphic_design {
+                        .sect_title {@include sectionTitle;}
+                        .graphic_wrap {
+                            #graphic_swiper {
+                                .swiper-wrapper {
+                                    .swiper-slide {}
+                                    .slide1 {}
+                                    .slide2 {}
+                                    .slide3 {}
+                                    .slide4 {}
+                                }
+                            }
+                        }
+                    }
+                    .experience {
+                        @include flCol;
+                        gap: 70px;
+                        .sect_title {@include sectionTitle;}
+                        .employement_wrap {
+                            @include flCol;
+                            .exp_title {
+                                @include flRow; gap: 20px;
+                                justify-content: center; align-items: center;
+                                img {}
+                                .exp_section_title {@include expSectionTitle;}
+                            }
+                            .employement_info {
+                                margin-top: 30px;
+                                @include flRow;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                .employement_card {
+                                    @include exp_card;
+                                    .card_title {@include cardTitle;}
+                                    .card_position {@include cardPosition}
+                                    .card_date {@include cardDate}
+                                }
+                                .next_img {
+                                    svg {}
+                                }
+                            }
+                        }
+                        .edu_wrap {
+                            @include flCol;
+                            .exp_title {
+                                @include flRow; gap: 20px;
+                                justify-content: center; align-items: center;
+                                img {}
+                                .exp_section_title {@include expSectionTitle;}
+                            }
+                            .edu_info {
+                                margin-top: 30px;
+                                @include flRow;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                .edu_card {
+                                    @include exp_card;
+                                    .title_tag {
+                                        width: 100%;
+                                        @include flRow;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        .card_title {@include cardTitle;}
+                                        span {@include cardEduStatus;}
+                                    }
+                                    .card_position {@include cardPosition}
+                                    .card_date {@include cardDate}
+                                }
+                                .next_img {}
+                            }
+                        }
+                    }
+                    .collaboration {
+                        .sect_title {@include sectionTitle; padding-bottom: 60px;}
+                        .coolab_wrap {
+                            @include flRow;
+                            gap: 50px;
+                            .collab_img {
+                                img {}
+                            }
+                            .collab_right {
+                                width: calc(100% - (528px + 50px));
+                                padding: 50px 0;
+                                @include flCol; gap: 60px;
+                                justify-content: flex-start; align-items: center;
+                                h2 {
+                                    font-size: $size30;
+                                    line-height: $line130;
+                                    letter-spacing: $min2;
+                                    text-align: $textCenter;
+                                }
+                                .collab_link_wrap {
+                                    @include flRow; gap: 10px;
+                                    justify-content: space-evenly; align-items: center;
+                                    .link_box {
+                                        a {
+                                            width: 171px; height: 60px;
+                                            @include flRow; align-items: center;
+                                            justify-content: center; gap: 10px;
+                                            img {}
+                                            .link_name {
+                                                line-height: $line130;
+                                                letter-spacing: $min2;
+                                            }
+                                        }
+                                    }
+                                    .kakao {
+                                        position: relative;
+                                        .kakao_qr {position: absolute; top: 50px;}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
