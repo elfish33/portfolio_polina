@@ -1,8 +1,7 @@
 //Graphic Swiper
 const graphicSwiper = new Swiper('.graphic_wrap #graphic_swiper',{
-    autoplay: {delay: 5000},
-    slidesPerView: 3.5,
-    spaceBetween: 10,
+    slidesPerView: 2.3,
+    spaceBetween: 0,
     loop: true,
 })
 
@@ -122,3 +121,4 @@ prjNavMap.forEach(li => {
         mainSwiper.slideTo(li.sec)
     })
 })
+

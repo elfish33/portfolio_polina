@@ -583,6 +583,10 @@ html body main #main_swiper .swiper-wrapper .graphic_design .sect_title {
   letter-spacing: -0.02rem;
   font-family: "Roboto Sans";
 }
+html body main #main_swiper .swiper-wrapper .graphic_design .graphic_wrap #graphic_swiper .swiper-wrapper .swiper-slide {
+  max-width: 456px;
+  max-height: 635px;
+}
 html body main #main_swiper .swiper-wrapper .experience {
   display: flex;
   flex-flow: column nowrap;

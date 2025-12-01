@@ -426,7 +426,9 @@ html {
                         .graphic_wrap {
                             #graphic_swiper {
                                 .swiper-wrapper {
-                                    .swiper-slide {}
+                                    .swiper-slide {
+                                        max-width: 456px; max-height: 635px;
+                                    }
                                     .slide1 {}
                                     .slide2 {}
                                     .slide3 {}
