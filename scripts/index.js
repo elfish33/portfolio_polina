@@ -1,8 +1,9 @@
 //Graphic Swiper
 const graphicSwiper = new Swiper('.graphic_wrap #graphic_swiper',{
-    slidesPerView: 2.3,
-    spaceBetween: 0,
-    loop: true,
+    slidesPerView: 3.5,
+    //centeredSlides: true,
+    spaceBetween: 10,
+    //loop: true,
 })
 
 //Header Nav Scroll
